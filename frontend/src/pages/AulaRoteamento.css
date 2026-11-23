@@ -1,0 +1,86 @@
+/* Aula Roteamento estático: reaproveita AulaGateway.css e AulaFerramentas.css. */
+.aula-roteamento .ar-topologia { display:flex; flex-wrap:wrap; gap:0; margin:12px 0; }
+.aula-roteamento .ar-no { position:relative; display:flex; flex-direction:column; gap:2px; flex:1 1 0; min-width:120px; margin-right:28px;
+  padding:10px 12px; border:1px solid #394453; border-radius:9px; background:#12161c; }
+.aula-roteamento .ar-no:last-child { margin-right:0; }
+.aula-roteamento .ar-no.roteador { border-color:#6e3543; background:#1a1217; }
+.aula-roteamento .ar-no small { font:12px Consolas,monospace; color:#9fb2c4; }
+.aula-roteamento .ar-no span { position:absolute; right:-29px; top:50%; width:28px; height:2px; background:#4a5463; }
+.aula-roteamento .af-escolhas button { font-family:inherit; }
+
+/* Revisão de 15/11/2026: topologia com ícones, tabelas de rotas, percurso do pacote e perguntas em cartões (.rt-*).
+   As regras .ar-* acima continuam: as aulas Ethernet/ARP, DHCP e DNS e Transporte usam este arquivo. */
+.rt-topologia { display:flex; align-items:flex-start; margin:18px 0 8px; padding:22px 28px 14px; border:1px solid rgba(255,255,255,.1);
+  border-radius:12px; background:rgba(0,0,0,.25); }
+.rt-par { display:flex; align-items:flex-start; flex:1 1 0; min-width:0; }
+.rt-par:last-child { flex:0 0 auto; }
+.rt-no { position:relative; display:flex; flex-direction:column; align-items:center; gap:4px; width:86px; flex:0 0 86px; padding:10px 6px;
+  border:1px solid rgba(255,255,255,.16); border-radius:10px; background:#161c23; transition:border-color .2s, box-shadow .2s; }
+.rt-no.roteador { border-color:rgba(255,77,94,.5); }
+.rt-icone { display:grid; place-items:center; height:30px; color:#c5ccd6; }
+.rt-icone svg { width:28px; height:28px; }
+.rt-no strong { font-size:14px; }
+.rt-no.ativo { border-color:#ff2d4a; box-shadow:0 0 0 4px rgba(255,45,74,.18); }
+.rt-no.ativo .rt-icone { color:#ff4d5e; }
+.rt-no.falha { border-color:#ffb020; box-shadow:0 0 0 4px rgba(255,176,32,.22); }
+.rt-no.falha .rt-icone { color:#ffb020; }
+.rt-pacote { position:absolute; top:-14px; right:-10px; width:26px; height:26px; padding:4px; border-radius:6px; background:#ff2d4a; color:#fff;
+  animation:rt-chegada .35s ease-out; }
+.rt-no.falha .rt-pacote { background:#ffb020; color:#111; }
+@keyframes rt-chegada { from { transform:translateX(-30px); opacity:0; } to { transform:none; opacity:1; } }
+.rt-trecho { flex:1 1 auto; min-width:70px; display:flex; flex-direction:column; padding-top:12px; }
+.rt-ips { display:flex; justify-content:space-between; padding:0 4px; font:600 12px Consolas,monospace; color:#e3e7ec; }
+.rt-cabo { height:3px; margin-top:4px; background:#ff173b; border-radius:2px; }
+.rt-rede { display:flex; flex-direction:column; align-items:center; gap:1px; width:max-content; align-self:center; margin-top:44px;
+  text-align:center; white-space:nowrap; }
+.rt-rede b { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#9fb2c4; }
+.rt-rede code { font:600 13px Consolas,monospace; color:#fff; }
+.rt-legenda { margin:4px 0 0; font-size:14px; color:#aeb8c4; }
+.rt-legenda code { font:600 13px Consolas,monospace; color:#fff; }
+
+.rt-tabelas { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:10px; margin:12px 0; }
+.rt-tabela { display:flex; flex-direction:column; gap:4px; margin:10px 0; padding:10px 12px; border:1px solid #2a323d; border-radius:9px; background:#070b0f; }
+.rt-tabelas .rt-tabela { margin:0; }
+.rt-tabela > span { font:600 13px Consolas,monospace; color:#ff4d5e; white-space:pre; }
+.rt-tabela code { display:flex; justify-content:space-between; gap:12px; padding:3px 6px; border-radius:5px;
+  font:13px Consolas,monospace; color:#e3e7ec; }
+.rt-tabela code em { font:normal 11px Inter,system-ui,sans-serif; letter-spacing:.04em; color:#8a96a5; white-space:nowrap; }
+.rt-tabela code.estatica em { color:#ff4d5e; }
+.rt-tabela code.usada { background:rgba(255,45,74,.14); outline:1px solid rgba(255,45,74,.6); color:#fff; }
+
+.rt-anatomia { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+.rt-anatomia span { display:flex; flex-direction:column; gap:6px; padding:10px 14px; border:1px solid #394453; border-radius:9px; background:#0c0f13; }
+.rt-anatomia code { font:700 18px Consolas,monospace; color:#fff; }
+.rt-anatomia small { font-size:12px; color:#aeb8c4; }
+.rt-anatomia .destino { border-color:#2f6fb3; }
+.rt-anatomia .via { border-color:#ff2d4a; }
+
+.rt-percurso { display:flex; flex-direction:column; gap:10px; margin:10px 0 4px; }
+.rt-passo { margin:0; padding:12px 16px; border-left:3px solid #ff2d4a; border-radius:8px; background:rgba(255,45,74,.06); }
+.rt-passo.erro { border-left-color:#ffb020; background:rgba(255,176,32,.07); }
+.rt-passo.vazio { color:#aeb8c4; }
+.rt-passo > span { font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#ff4d5e; }
+.rt-passo.erro > span { color:#ffb020; }
+.rt-passo p { margin:6px 0 0; line-height:1.55; }
+.rt-botoes { display:flex; gap:10px; }
+.rt-botoes button { display:inline-flex; align-items:center; gap:8px; }
+
+.rt-bloco-perguntas { margin-top:22px; padding-top:16px; border-top:1px solid rgba(255,255,255,.08); }
+.rt-bloco-perguntas > h3 { margin:0 0 10px; font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#ff4d5e; }
+.rt-perguntas { display:flex; flex-direction:column; gap:12px; margin-bottom:14px; }
+.rt-pergunta { display:flex; flex-direction:column; gap:12px; padding:14px 16px; border:1px solid #2a323d; border-radius:10px; background:#12161c; }
+.rt-pergunta > strong { display:flex; gap:10px; align-items:baseline; font-size:15px; font-weight:600; line-height:1.45; }
+.rt-pergunta > strong span { display:grid; place-items:center; flex:0 0 24px; height:24px; border-radius:50%; background:#ff2d4a;
+  color:#fff; font-size:12px; font-weight:800; }
+.rt-pergunta .ag-retorno { margin:0; }
+.rt-opcoes { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:8px; }
+.rt-opcoes button { padding:10px 14px; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:#0c0f13; color:#e3e7ec;
+  font:inherit; font-size:14px; line-height:1.35; text-align:left; cursor:pointer; transition:border-color .15s, background .15s; }
+.rt-opcoes button:hover { border-color:rgba(255,255,255,.4); }
+.rt-opcoes button.ativo { border-color:#ff2d4a; background:rgba(255,45,74,.12); color:#fff; }
+@media (max-width:900px) { .rt-tabelas { grid-template-columns:1fr; } .rt-topologia { overflow-x:auto; } }
+/* Aula Switch e VLANs: os comandos do switch explicados antes do exercício. */
+.al-comandos { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.al-comandos li { display:flex; flex-direction:column; gap:2px; }
+.al-comandos code { font:14px Consolas,monospace; color:#f4f6f8; }
+.al-comandos span { font-size:14px; color:#b8c2cf; }

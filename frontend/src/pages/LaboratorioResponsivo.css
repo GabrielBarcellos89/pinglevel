@@ -1,0 +1,204 @@
+/* Layout aprovado do Primeiro Contato oficial. Escopo exclusivo: lab-responsivo. */
+.responsivo-titulo-curto { display: none; }
+.laboratorio-pagina.lab-responsivo {
+  width: 100%; max-width: 1800px; height: auto; min-height: calc(100dvh - 64px);
+  padding: 12px clamp(12px, 1.6vw, 26px) 26px; overflow: visible;
+  display: flex; flex-direction: column; gap: 12px; container-type: inline-size;
+}
+.responsivo-layout-aviso { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 14px; padding: 9px 13px; border: 1px solid #63303a; border-radius: 9px; background: #1b1115; color: #dfe2e7; font-size: 13px; line-height: 1.4; }
+.responsivo-layout-aviso strong { color: var(--vermelho); font-size: 13px; letter-spacing: .08em; }
+.responsivo-layout-controles { display: flex; flex-wrap: wrap; gap: 8px; }
+.responsivo-layout-controles button { padding: 8px 12px; border: 1px solid var(--borda); border-radius: 8px; background: #14181e; color: var(--texto); font: inherit; font-size: 13px; cursor: pointer; min-height: 36px; }
+.responsivo-layout-controles button[aria-pressed="true"] { border-color: var(--vermelho); }
+.responsivo-layout-controles button:last-child { margin-left: auto; }
+.lab-responsivo button:focus-visible, .lab-responsivo summary:focus-visible, .lab-responsivo input:focus-visible { outline: 2px solid var(--vermelho); outline-offset: 3px; }
+.lab-responsivo .lab-cabecalho { min-height: 0; padding: 12px 16px; gap: 16px; flex-wrap: wrap; }
+.lab-responsivo .lab-cabecalho > div:first-child { flex: 1 1 340px; min-width: 0; }
+.lab-responsivo .lab-cabecalho h1 { margin: 4px 0; font-size: clamp(21px, 1.8vw, 28px); line-height: 1.2; }
+.lab-responsivo .lab-cabecalho p { font-size: 13px; margin: 0; }
+.lab-responsivo .lab-cabecalho-acoes { gap: 8px; min-width: 0; flex-direction: row; flex-wrap: wrap; }
+.lab-responsivo .lab-acoes-superiores { flex-wrap: wrap; }
+.lab-responsivo .lab-acoes-superiores .lab-acao-principal { min-width: 145px; min-height: 38px; padding: 0 10px; }
+.lab-responsivo .lab-tempo { padding: 4px 10px; gap: 8px; }
+.lab-responsivo .lab-tempo strong { font-size: 23px; }
+.lab-responsivo .lab-aviso, .lab-responsivo .lab-aviso-tempo { margin-top: 0; }
+.lab-responsivo .lab-grade { flex: none; display: flex; flex-direction: column; gap: 12px; margin: 0; min-height: 0; }
+.lab-responsivo .lab-topologia-painel { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.8fr); grid-template-areas: 'cabeca nos' 'descricao nos'; gap: 5px 20px; padding: 12px 16px; }
+.lab-responsivo .lab-painel-titulo { grid-area: cabeca; flex-wrap: wrap; gap: 6px; }
+.lab-responsivo .lab-painel-titulo h2 { font-size: 17px; }
+.lab-responsivo .lab-instrucao-topologia { grid-area: descricao; font-size: 13px; line-height: 1.45; margin: 0; }
+.lab-responsivo .lab-topologia { grid-area: nos; width: 100%; max-width: 850px; margin: 0; justify-self: end; }
+.lab-responsivo .lab-no { flex-basis: 145px; min-height: 72px; gap: 5px; }
+.lab-responsivo .lab-no strong { font-size: 13px; }
+.lab-responsivo .lab-ip-no { font-size: 13px; }
+.lab-responsivo .lab-experimento { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); height: clamp(380px, 56dvh, 620px); min-height: 380px; gap: 12px; }
+.lab-responsivo .lab-terminal-painel { width: 100%; height: 100%; min-height: 380px; min-width: 0; }
+.lab-responsivo .lab-terminal-cabecalho { flex-basis: 44px; padding: 0 14px; }
+.lab-responsivo .lab-terminal-cabecalho strong { font-size: 13px; }
+.lab-responsivo .lab-terminal-saida { height: auto; min-height: 0; flex: 1 1 0; font-size: 14px; line-height: 1.6; padding: 14px; }
+.lab-responsivo .lab-comando { padding: 10px; gap: 8px; }
+.lab-responsivo .lab-comando input { font-size: 14px; height: 44px; }
+.lab-responsivo .lab-comando button { min-height: 44px; }
+.responsivo-bastidores-host { min-width: 0; min-height: 0; height: 100%; }
+.responsivo-bastidores-host[hidden] { display: none; }
+.lab-responsivo .lab-bastidores { height: 100%; min-height: 0; max-height: none; }
+.lab-responsivo .lab-bastidores-corpo { padding: 12px; }
+.lab-responsivo .lab-bastidores-vazio, .lab-responsivo .lab-aprendizagem p, .lab-responsivo .lab-aprendizagem-pergunta label, .lab-responsivo .lab-aprendizagem-pergunta legend, .lab-responsivo .lab-bastidores-resumo p { font-size: 14px; line-height: 1.5; }
+.lab-responsivo .lab-aprendizagem h3 { font-size: 14px; }
+.lab-responsivo .lab-bastidores-eventos p { font-size: 13px; }
+.lab-responsivo .lab-missao-painel.fechado { position: static; align-self: flex-end; width: auto; height: auto; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.lab-responsivo .lab-link-flutuante { width: 64px; height: 64px; }
+.lab-responsivo .lab-link-flutuante img { width: 58px; height: 58px; }
+.lab-responsivo .lab-progresso-painel { padding: 12px 16px; overflow: visible; min-height: 0; height: auto; }
+.responsivo-etapa-resumo { margin: 8px 0; color: #dfe2e7; font-size: 14px; }
+.responsivo-todas-etapas summary { cursor: pointer; color: #b8bec7; font-size: 13px; padding: 6px 0; }
+.responsivo-todas-etapas[open] .lab-etapas { margin-top: 10px; }
+.lab-responsivo .lab-etapas li { min-height: 120px; }
+.lab-responsivo .lab-etapas h3 { font-size: 14px; }
+.lab-responsivo .lab-etapas p { font-size: 13px; }
+.lab-responsivo.sem-bastidores .lab-experimento { grid-template-columns: minmax(0, 1fr); }
+.lab-responsivo .lab-cabecalho > div > span, .lab-responsivo .lab-painel-titulo > div > span, .lab-responsivo .lab-bastidores-cabecalho > div > span { color: var(--vermelho); }
+.aplicacao:has(.lab-responsivo) .topbar { min-height: 64px; padding: 0 24px; }
+.aplicacao:has(.lab-responsivo-foco) { padding-left: 0; }
+.aplicacao:has(.lab-responsivo-foco) > .sidebar,
+.aplicacao:has(.lab-responsivo-foco) .topbar { display: none; }
+.lab-responsivo.lab-responsivo-foco { max-width: none; min-height: 100dvh; padding: 10px 14px; gap: 10px; }
+.lab-responsivo-foco .lab-cabecalho { display: none; }
+.lab-responsivo-foco .lab-instrucao-topologia { display: none; }
+.lab-responsivo-foco .lab-topologia-painel { padding: 8px 14px; }
+.lab-responsivo-foco .lab-no { min-height: 62px; }
+.lab-responsivo-foco .lab-experimento { height: max(330px, calc(100dvh - 210px)); min-height: 330px; }
+.lab-responsivo-foco .lab-terminal-painel { min-height: 330px; }
+@container (max-width: 900px) {
+  .lab-responsivo .lab-experimento { grid-template-columns: minmax(0, 1fr); height: auto; }
+  .lab-responsivo .lab-terminal-painel { height: 380px; }
+  .lab-responsivo .responsivo-bastidores-host { height: 400px; }
+  .lab-responsivo.sem-bastidores .lab-experimento { height: 380px; }
+  .lab-responsivo .lab-topologia-painel { grid-template-columns: 1fr; grid-template-areas: 'cabeca' 'nos' 'descricao'; }
+  .lab-responsivo .lab-topologia { justify-self: start; }
+}
+
+/* Revisão: o campo precisa caber na abertura NORMAL, não só no modo foco. */
+@media (min-width: 1000px) {
+  .laboratorio-pagina.lab-responsivo .lab-experimento { min-height: 0; grid-template-columns: minmax(0, 1.1fr) minmax(270px, .9fr); }
+  .laboratorio-pagina.lab-responsivo .lab-terminal-painel { height: 100%; min-height: 0; }
+  .laboratorio-pagina.lab-responsivo .responsivo-bastidores-host { height: 100%; min-height: 0; }
+  .laboratorio-pagina.lab-responsivo.sem-bastidores .lab-experimento { grid-template-columns: minmax(0, 1fr); }
+  .laboratorio-pagina.lab-responsivo .lab-topologia-painel { grid-template-columns: 150px minmax(0, 1fr); grid-template-areas: 'cabeca nos'; gap: 8px 12px; }
+  .laboratorio-pagina.lab-responsivo .lab-instrucao-topologia { display: none; }
+  .laboratorio-pagina.lab-responsivo .lab-topologia { justify-self: end; }
+}
+@media (min-width: 1000px) and (max-height: 850px) {
+  .aplicacao:has(.lab-responsivo) .topbar { min-height: 48px; }
+  .laboratorio-pagina.lab-responsivo { padding-top: 8px; padding-bottom: 12px; gap: 8px; }
+  .lab-responsivo .responsivo-layout-aviso { padding: 5px 10px; font-size: 13px; }
+  .lab-responsivo .responsivo-layout-controles { gap: 6px; }
+  .lab-responsivo .responsivo-layout-controles button { min-height: 30px; padding: 5px 10px; font-size: 13px; }
+  .lab-responsivo .lab-cabecalho { padding: 7px 12px; gap: 8px; flex-wrap: nowrap; }
+  .lab-responsivo .lab-cabecalho > div:first-child { flex: 1 1 170px; }
+  .lab-responsivo .lab-cabecalho h1 { font-size: 20px; margin: 3px 0 0; }
+  .lab-responsivo .lab-cabecalho > div > span { font-size: 13px; }
+  .lab-responsivo .responsivo-titulo-completo, .lab-responsivo .lab-cabecalho p { display: none; }
+  .lab-responsivo .responsivo-titulo-curto { display: inline; }
+  .lab-responsivo .lab-cabecalho-acoes { flex-wrap: nowrap; }
+  .lab-responsivo .lab-acoes-superiores { flex-wrap: nowrap; gap: 6px; }
+  .lab-responsivo .lab-tempo { padding: 3px 8px; }
+  .lab-responsivo .lab-tempo strong { font-size: 20px; }
+  .lab-responsivo .lab-acoes-superiores .lab-acao-principal { min-width: 125px; min-height: 34px; }
+  .laboratorio-pagina.lab-responsivo .lab-topologia-painel { padding: 6px 12px; }
+  .lab-responsivo .lab-no { flex-basis: 130px; min-height: 58px; gap: 3px; }
+  .lab-responsivo .lab-no svg { width: 21px; height: 21px; }
+  .lab-responsivo .lab-no strong { font-size: 13px; }
+  .lab-responsivo .lab-grade { gap: 8px; }
+  .lab-responsivo .lab-terminal-cabecalho { flex-basis: 40px; }
+  .lab-responsivo .lab-comando { padding: 8px; }
+  .lab-responsivo .lab-comando input, .lab-responsivo .lab-comando button { height: 40px; min-height: 40px; }
+}
+
+/* Organização aprovada: progresso, topologia e Link na mesma faixa. */
+.laboratorio-pagina.lab-responsivo .lab-topologia-painel.responsivo-faixa-missao {
+  grid-template-columns: 294px minmax(0, 1fr) 150px; grid-template-areas: none;
+  padding: 8px 14px; gap: 18px; align-items: center;
+}
+.responsivo-progresso-integrado { min-width: 0; padding-right: 16px; border-right: 1px solid #30343c; }
+.responsivo-progresso-linha { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.responsivo-progresso-linha > span { color: var(--vermelho); font-size: 13px; letter-spacing: .8px; font-weight: 800; }
+.responsivo-progresso-linha > strong { color: #c2c7cf; font-size: 13px; white-space: nowrap; }
+.lab-responsivo .responsivo-progresso-integrado .lab-progresso { height: 4px; margin: 5px 0 6px; }
+.responsivo-etapa-integrada { display: flex; align-items: center; gap: 8px; }
+.responsivo-etapa-numero { flex: 0 0 26px; height: 26px; display: grid; place-items: center; border: 1px solid var(--vermelho); border-radius: 50%; background: #32131b; color: #fff; font-size: 13px; font-weight: 700; }
+.responsivo-etapa-integrada > div { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.responsivo-etapa-integrada small { color: #969eaa; font-size: 13px; letter-spacing: .6px; }
+.responsivo-etapa-integrada strong { color: var(--texto); font-size: 14px; line-height: 1.2; }
+.responsivo-progresso-inferior { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 4px; }
+.responsivo-progresso-inferior button { border: 0; padding: 0; color: #d1d6de; background: transparent; font: inherit; font-size: 13px; cursor: pointer; }
+.responsivo-progresso-inferior button span { margin-left: 6px; }
+.responsivo-progresso-inferior b { display: flex; align-items: center; gap: 5px; color: #f2bd35; font-size: 13px; }
+.responsivo-topologia-centro { min-width: 0; }
+.responsivo-rede-legenda { display: block; margin-bottom: 5px; color: #a2a9b5; font-size: 14px; letter-spacing: 1px; font-weight: 700; }
+.laboratorio-pagina.lab-responsivo .responsivo-topologia-centro .lab-topologia { grid-area: auto; width: 100%; margin: 0; }
+.responsivo-ajuda-integrada { display: flex; align-items: center; gap: 8px; padding: 0 0 0 12px; min-height: 60px; border: 0; border-left: 1px solid #30343c; background: transparent; color: var(--texto); text-align: left; cursor: pointer; }
+.responsivo-ajuda-integrada img { width: 42px; height: 60px; object-fit: contain; }
+.responsivo-ajuda-integrada > span { display: flex; flex-direction: column; gap: 6px; }
+.responsivo-ajuda-integrada strong { font-size: 13px; line-height: 1.4; }
+.responsivo-ajuda-integrada small { font-size: 13px; color: #c9ced6; }
+.lab-responsivo .responsivo-etapas-popover { width: min(460px, calc(100vw - 32px)); max-height: calc(100dvh - 70px); padding: 16px; border: 1px solid #63303a; border-radius: 12px; color: var(--texto); background: #101318; overflow: auto; box-shadow: 0 12px 60px #0009; }
+.responsivo-etapas-popover::backdrop { background: #0006; }
+.responsivo-etapas-popover > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.responsivo-etapas-popover h2 { margin: 0; font-size: 18px; }
+.responsivo-etapas-popover > header button { padding: 6px 10px; border: 1px solid var(--borda); border-radius: 6px; color: var(--texto); background: #171b21; font: inherit; font-size: 13px; cursor: pointer; }
+.lab-responsivo .responsivo-etapas-popover .lab-etapas { grid-template-columns: 1fr; gap: 8px; }
+.lab-responsivo .responsivo-etapas-popover .lab-etapas li { min-height: 0; }
+@container (max-width: 1050px) {
+  .laboratorio-pagina.lab-responsivo .lab-topologia-painel.responsivo-faixa-missao { grid-template-columns: 220px minmax(0, 1fr) 120px; padding: 6px 10px; gap: 12px; }
+  .responsivo-progresso-integrado { padding-right: 10px; }
+  .responsivo-progresso-linha > span { font-size: 13px; letter-spacing: .5px; }
+  .responsivo-progresso-linha > strong { font-size: 13px; }
+  .responsivo-etapa-integrada strong { font-size: 13px; }
+  .lab-responsivo .responsivo-topologia-centro .lab-no { flex-basis: 110px; min-height: 58px; }
+  .lab-responsivo .responsivo-topologia-centro .lab-enlace { min-width: 12px; }
+  .lab-responsivo .responsivo-topologia-centro .lab-ip-no { font-size: 13px; gap: 3px; }
+  .lab-responsivo .responsivo-topologia-centro .lab-ip-no span { font-size: 13px; padding: 2px 3px; }
+  .responsivo-ajuda-integrada { padding-left: 8px; gap: 5px; }
+  .responsivo-ajuda-integrada img { width: 32px; height: 52px; }
+}
+
+@media (min-width: 1000px) and (max-height: 600px) {
+  .lab-responsivo .lab-cabecalho > div:first-child > span { display: none; }
+  .lab-responsivo .lab-cabecalho h1 { margin-top: 0; }
+}
+
+@media (min-width: 1000px) and (max-height: 600px) {
+  .lab-responsivo .responsivo-progresso-integrado .lab-progresso { margin: 3px 0; }
+  .responsivo-etapa-integrada small { line-height: 1; }
+  .lab-responsivo .responsivo-topologia-centro .lab-no { min-height: 50px; gap: 2px; }
+  .lab-responsivo .responsivo-topologia-centro .lab-no svg { width: 17px; height: 17px; }
+  .responsivo-rede-legenda { margin-bottom: 4px; }
+}
+
+.lab-responsivo .responsivo-layout-controles button:last-child { margin-left: 0; }
+.lab-responsivo .lab-aviso { padding: 5px 10px; font-size: 13px; line-height: 1.4; }
+
+/* Revisão visual do Lab 1 (30/10/2026): terminal maior, topologia centralizada, "Agora faça" e ajuda do Link legível. */
+.lab1-agora { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 1px solid #5a2532; border-left: 4px solid var(--vermelho); border-radius: 12px; background: #16101a; }
+.lab1-agora > span { flex-shrink: 0; color: var(--vermelho); font-size: 13px; font-weight: 800; letter-spacing: .1em; }
+.lab1-agora p { margin: 0; color: #eef0f3; font-size: 16px; line-height: 1.45; }
+.lab1-agora p small { display: block; margin-top: 2px; color: var(--texto-suave); font-size: 13px; }
+.lab1-agora.pronta { border-color: #24573a; border-left-color: #44d47b; background: #10251a; }
+.lab1-agora.pronta > span { color: #44d47b; }
+.lab1-agora .lab-validar { width: auto; min-width: 190px; min-height: 46px; margin: 0 0 0 auto; padding: 0 18px; font-size: 17px; }
+.laboratorio-pagina.lab-responsivo .lab-experimento { grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr); height: clamp(440px, 62dvh, 760px); }
+.laboratorio-pagina.lab-responsivo.sem-bastidores .lab-experimento { grid-template-columns: minmax(0, 1fr); }
+.laboratorio-pagina.lab-responsivo .lab-terminal-saida { font-size: 15px; line-height: 1.6; }
+.laboratorio-pagina.lab-responsivo .lab-comando input { font-size: 15px; }
+.laboratorio-pagina.lab-responsivo .lab-terminal-cabecalho strong { font-size: 14px; }
+.laboratorio-pagina.lab-responsivo .lab-cabecalho p { font-size: 14px; }
+.laboratorio-pagina.lab-responsivo .responsivo-topologia-centro { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.laboratorio-pagina.lab-responsivo .responsivo-topologia-centro .lab-topologia { justify-self: center; margin: 0 auto; max-width: 760px; }
+.laboratorio-pagina.lab-responsivo .lab-no strong { font-size: 14px; }
+.laboratorio-pagina.lab-responsivo .responsivo-topologia-centro .lab-ip-no, .laboratorio-pagina.lab-responsivo .lab-ip-no { font-size: 13px; }
+.laboratorio-pagina.lab-responsivo .responsivo-ajuda-integrada img { width: 56px; height: 56px; object-fit: contain; }
+.laboratorio-pagina.lab-responsivo .responsivo-ajuda-integrada strong { font-size: 14px; }
+.laboratorio-pagina.lab-responsivo .responsivo-ajuda-integrada small { font-size: 13px; }
+.laboratorio-pagina.lab-responsivo .responsivo-etapa-integrada strong { font-size: 15px; }
+.laboratorio-pagina.lab-responsivo .responsivo-ajuda-integrada img { width: 52px; height: 52px; border-radius: 50%; border: 1px solid #5a2532; background: #16101a; }

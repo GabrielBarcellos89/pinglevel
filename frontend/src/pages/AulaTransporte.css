@@ -1,0 +1,21 @@
+/* Aula Transporte: portas, TCP e UDP. Reaproveita AulaGateway.css, AulaFerramentas.css e AulaRoteamento.css. */
+.aula-transporte .at-exemplos { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px; margin:12px 0; }
+.aula-transporte .at-exemplos article, .aula-transporte .at-comparativo article { display:flex; flex-direction:column; gap:4px;
+  padding:12px 14px; border:1px solid #394453; border-radius:9px; background:#12161c; }
+.aula-transporte .at-exemplos b { font:600 16px Consolas,monospace; color:#f4f6f8; }
+.aula-transporte .at-exemplos span { font-size:14px; color:#b8c2cf; }
+.aula-transporte .at-comparativo { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:12px 0; }
+.aula-transporte .at-comparativo b { font-size:18px; color:#ff4d5e; }
+.aula-transporte .at-comparativo span { font-size:15px; color:#e3e7ec; }
+.aula-transporte .at-comparativo small { font-size:13px; color:#9fb2c4; }
+.aula-transporte .at-captura { display:flex; flex-direction:column; margin:12px 0; border:1px solid #394453; border-radius:9px;
+  overflow:hidden; font-size:14px; }
+.aula-transporte .at-captura > div { display:grid; grid-template-columns:36px 90px minmax(0, 1.6fr) minmax(0, 1fr); gap:10px;
+  padding:7px 12px; align-items:center; }
+.aula-transporte .at-cabecalho { background:#1a2029; color:#9fb2c4; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.aula-transporte .at-linha { border-top:1px solid #222a35; background:#0f1318; }
+.aula-transporte .at-linha.tcp b { color:#7cc4ff; }
+.aula-transporte .at-linha.udp b { color:#ffc457; }
+.aula-transporte .at-linha code { font:13px Consolas,monospace; color:#e3e7ec; }
+@media (max-width:900px) { .aula-transporte .at-exemplos, .aula-transporte .at-comparativo { grid-template-columns:1fr; } }
+.aula-transporte .at-cena { display:block; width:100%; height:auto; margin:14px 0; border-radius:14px; }

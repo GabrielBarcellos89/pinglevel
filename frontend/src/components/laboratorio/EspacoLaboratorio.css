@@ -1,0 +1,223 @@
+/* Estrutura comum de apresentação; sem seletores para páginas fora deste espaço. */
+.pl-espaco { display:flex; flex-direction:column; min-height:0; flex:1; gap:8px; --pl-altura-guia:100px; }
+.pl-topologia-fixa { flex:0 0 auto; min-height:0; }
+.pl-topologia-alternar,.pl-tutor-alternar { display:none!important; }
+.pl-corpo { display:grid; grid-template-columns:minmax(0,1fr) 270px; gap:12px; min-height:0; flex:1; }
+.pl-pratica { overflow:auto; min-width:0; min-height:0; border:1px solid #303641; border-radius:12px; background:#0e1319; overscroll-behavior:contain; scrollbar-gutter:stable; }
+.pl-pratica:focus-visible { outline:2px solid #f02035; outline-offset:2px; }
+.pl-agora { position:sticky; top:0; z-index:4; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px 16px; border-bottom:1px solid #d42b49; background:linear-gradient(110deg,#461421,#191219); box-shadow:0 4px 15px #0005; }
+.pl-agora-etiqueta { color:#ff8094; font-size:12px; font-weight:800; letter-spacing:.9px; }
+.pl-agora h2 { margin:5px 0!important; font-size:20px!important; }
+.pl-agora p { color:#f1e6ea!important; font-size:13px!important; }
+.pl-agora>button { flex-shrink:0; background:#67172b!important; border-color:#da3452!important; }
+.pl-conteudo-pratica { padding:12px; }
+.pl-conteudo-pratica [data-acao] { scroll-margin-top:calc(var(--pl-altura-guia) + 14px); scroll-margin-bottom:20px; }
+.pl-tutor { min-height:0; min-width:0; overflow:auto; padding:14px; border:1px solid #71303e; border-radius:12px; background:linear-gradient(150deg,#211219,#101419); }
+.pl-tutor>header { display:flex; gap:8px; align-items:center; padding-bottom:10px; border-bottom:1px solid #49303a; }
+.pl-tutor>header>img { width:30px; height:35px; object-fit:contain; }
+.pl-tutor>header>strong { font-size:15px; }
+.pl-mascote { display:block; width:100px; height:120px; object-fit:contain; margin:8px auto; }
+.pl-fala-link { border:1px solid #683044; border-radius:10px; background:#30131e; padding:12px; margin:0 0 12px!important; }
+.pl-tutor-conteudo>button { width:100%; border-color:#b52d46!important; background:#411322!important; }
+.pl-tutor-conteudo>.pl-recolher-pista { margin-top:7px; background:transparent!important; border-color:transparent!important; }
+.pl-disponibilidade { margin-top:12px!important; padding-top:10px; border-top:1px solid #49303a; font-size:12px!important; color:#aeb8c8!important; }
+@media (max-width:1100px), (max-height:720px) {
+ .pl-corpo { grid-template-columns:minmax(0,1fr) 220px; gap:8px; }
+ .pl-mascote { height:85px; width:70px; }
+ .pl-tutor { padding:10px; }
+ .pl-fala-link { padding:9px; font-size:12px!important; }
+ .pl-agora { padding:10px 12px; }
+ .pl-agora h2 { font-size:17px!important; }
+}
+@media (max-width:850px) {
+ .pl-topologia-alternar,.pl-tutor-alternar { display:flex!important; }
+ .pl-topologia-alternar { width:100%; justify-content:space-between!important; }
+ .pl-topologia-fixa { max-height:28dvh; overflow:auto; }
+ .pl-corpo { display:flex; flex-direction:column; gap:7px; }
+ .pl-pratica { flex:1; }
+ .pl-tutor { flex:0 0 auto; max-height:45%; padding:7px 10px; }
+ .pl-tutor>header { padding:0; border:0; }
+ .pl-tutor>header>img { width:26px; height:30px; }
+ .pl-tutor>header>strong { font-size:13px; }
+ .pl-tutor-alternar { margin-left:auto; min-height:30px!important; padding:5px 9px!important; font-size:12px!important; }
+ .pl-tutor-conteudo { display:none; }
+ .pl-tutor-expandido .pl-tutor-conteudo { display:block; margin-top:8px; }
+ .pl-mascote { display:none; }
+ .pl-fala-link { margin-bottom:7px!important; }
+ .pl-disponibilidade { display:none; }
+ .pl-agora { gap:7px; padding:10px; }
+ .pl-agora h2 { font-size:16px!important; }
+ .pl-agora p { font-size:12px!important; }
+ .pl-agora>button { font-size:12px!important; padding:7px!important; }
+ .pl-conteudo-pratica { padding:8px; }
+}
+@media (max-width:850px) {
+ .pl-topologia-alternar { position:sticky; top:0; z-index:5; background:#151b23!important; }
+ .pl-topologia-fixa [data-acao] { scroll-margin-top:45px; }
+}
+.pl-tutor:has(.pl-conversa)>header { position:sticky; top:-14px; z-index:2; background:#211219; padding-top:8px; }
+.pl-tutor:has(.pl-conversa) .pl-mascote { height:72px; width:62px; margin:6px auto; }
+.pl-dica-enter { display:block; margin:4px 0 2px; color:#9aa2ae; font-size:12px; }
+.pl-conversa label { display:block; font-size:13px; color:#e3e7ef; margin-bottom:6px; }
+.pl-conversa textarea { display:block; width:100%; resize:vertical; min-height:64px; max-height:150px; background:#0b1017; color:#f2f4f8; border:1px solid #5c4250; border-radius:7px; padding:9px; font:13px/1.4 inherit; margin-bottom:8px; }
+.pl-conversa button { width:100%; border-color:#b52d46!important; background:#411322!important; }
+.pl-conversa p { white-space:pre-wrap; overflow-wrap:anywhere; }
+.pl-mensagens { margin-bottom:12px; }
+.pl-mensagens article { border-top:1px solid #503440; padding:10px 0; }
+.pl-pergunta-aluno { font-size:12px!important; margin-bottom:8px!important; color:#b9c4d4!important; }
+.pl-modo-tutor { display:inline-block; font-size:12px; color:#90d9b5; margin-bottom:6px; }
+.pl-contingencia { color:#f5c58c; }
+.pl-aviso-tutor { font-size:12px!important; color:#c7b69f!important; margin:7px 0!important; }
+.pl-erro-tutor { font-size:12px!important; color:#ffb6a1!important; margin-top:8px!important; }
+.pl-fontes { margin-top:8px; font-size:12px; color:#b8c4d4; }
+.pl-fontes summary { cursor:pointer; }
+.pl-fontes ul { padding-left:16px; }
+@media (max-width:850px) { .pl-tutor:has(.pl-conversa)>header { top:-7px; } }
+/* A dúvida pode ser escrita sem procurar o formulário abaixo do histórico. */
+.pl-tutor:has(.pl-conversa) { display:flex; flex-direction:column; overflow:hidden; }
+.pl-tutor:has(.pl-conversa)>header { flex-shrink:0; position:static; }
+.pl-tutor:has(.pl-conversa) .pl-tutor-conteudo { display:flex; flex-direction:column; min-height:0; flex:1; }
+.pl-tutor:has(.pl-conversa) .pl-mascote,.pl-tutor:has(.pl-conversa) .pl-fala-link { flex-shrink:0; }
+.pl-tutor:has(.pl-conversa) .pl-fala-link { font-size:12px; padding:8px; margin-bottom:8px!important; }
+.pl-tutor:has(.pl-mensagens) .pl-mascote,.pl-tutor:has(.pl-mensagens) .pl-fala-link,.pl-tutor:has(.pl-conversa) .pl-disponibilidade { display:none; }
+.pl-conversa { display:flex; flex-direction:column; min-height:0; flex:1; }
+.pl-conversa .pl-mensagens { min-height:0; flex:1; overflow:auto; overscroll-behavior:contain; margin-bottom:8px; padding-right:5px; }
+.pl-conversa form { flex-shrink:0; padding-top:8px; border-top:1px solid #503440; }
+@media (max-height:800px) { .pl-tutor:has(.pl-conversa) .pl-mascote { display:none; } }
+@media (max-width:850px) {
+ .pl-tutor:has(.pl-conversa):not(.pl-tutor-expandido) .pl-tutor-conteudo { display:none; }
+ .pl-tutor-expandido:has(.pl-conversa) { height:45%; }
+ .pl-tutor:has(.pl-conversa) .pl-fala-link { display:none; }
+}
+@media (max-height:720px) { .pl-tutor:has(.pl-conversa) .pl-fala-link { display:none; } }
+
+/* Pistas do "Agora faça": uma de cada vez. */
+.pl-pistas { display:flex; flex-direction:column; align-items:flex-start; gap:6px; margin-top:10px; }
+.pl-pista { margin:0; padding:8px 12px; border-left:3px solid #f5b942; border-radius:6px; background:#221d12; color:#f1e6cc; font-size:15px; line-height:1.5; }
+.pl-pista b { margin-right:6px; color:#f5b942; }
+.pl-pista code, .pl-pista kbd { font-family:ui-monospace, monospace; }
+.pl-pedir-pista { padding:6px 12px; border:1px solid #6b5220; border-radius:8px; background:transparent; color:#ffd27a; font-size:14px; cursor:pointer; }
+
+/* Três colunas (Labs 2 e 5 a 10): mapa e "Agora faça" | terminal na altura toda | tarefas e Link. */
+.pl-tres { display:grid; grid-template-columns:minmax(300px,.85fr) minmax(0,1.5fr) minmax(320px,1fr); gap:12px; }
+.pl-tres>.pl-col { display:flex; flex-direction:column; gap:10px; min-width:0; min-height:0; }
+.pl-tres .pl-col-mapa { overflow:hidden; }
+.pl-tres .pl-col-mapa>.pl-agora, .pl-tres .pl-col-tarefas>.pl-agora { position:static; flex:0 1 auto; min-height:0; overflow:auto; justify-content:flex-start; flex-direction:column; align-items:stretch; border:1px solid #d42b49; border-radius:12px; }
+.pl-tres .pl-col-mapa>.pl-agora, .pl-tres .pl-col-tarefas>.pl-agora>button { align-self:flex-start; }
+.pl-tres .pl-col-mapa .gw-etapas { grid-template-columns:1fr!important; gap:6px; }
+.pl-tres .pl-col-terminal { overflow:hidden; }
+.pl-tres .pl-col-terminal>.lt-pratica { display:flex; flex-direction:column; flex:1; min-height:0; }
+.pl-tres .pl-col-terminal .lt-terminal { flex:1; min-height:0; }
+.pl-tres .pl-col-terminal .lt-tela { flex:1; max-height:none; min-height:0; }
+.pl-tres .pl-col-tarefas { overflow:hidden; }
+.pl-tres .pl-tarefas { flex:1 1 55%; min-height:0; overflow:auto; overscroll-behavior:contain; }
+.pl-tres .pl-tarefas:not(:has(section section)) { display:none; }
+.pl-tres .pl-col-tarefas>.pl-tutor { flex:1 1 45%; min-height:220px; }
+.pl-tres .lr-linha { grid-template-columns:1fr; gap:4px; }
+.pl-tres .lr-cabecalho { display:none; }
+.pl-tres .lr-plano-descricao { font-size:14px; }
+/* Mapa da sala na coluna estreita. */
+.pl-tres .lr-lan-sala { padding:28px 10px 12px; gap:18px; }
+.pl-tres .lr-lan-pcs { gap:8px; }
+.pl-tres .lr-lan-pc { width:auto; flex:1; min-width:0; padding:8px 4px; }
+.pl-tres .lr-lan-pc::after { left:-4px; right:-4px; }
+.pl-tres .lr-lan-pc small { font-size:11px; text-align:center; overflow-wrap:anywhere; }
+.pl-tres .lr-lan-pc strong { font-size:14px; }
+/* Link recolhido numa barra até o aluno pedir; aberto, divide a coluna com as tarefas. */
+.pl-tres .pl-tutor-alternar { display:flex!important; margin-left:auto; gap:6px; border-color:#b52d46!important; background:#411322!important; }
+.pl-tres .pl-tutor:not(.pl-tutor-expandido) .pl-tutor-conteudo { display:none; }
+.pl-tres .pl-col-tarefas>.pl-tutor:not(.pl-tutor-expandido) { flex:0 0 auto; min-height:0; padding:10px 14px; }
+.pl-tres .pl-tutor:not(.pl-tutor-expandido)>header { padding:0; border:0; }
+.pl-tres .pl-col-tarefas>.pl-tutor-expandido { flex:1 1 60%; }
+.pl-tres .pl-tutor-expandido .pl-tutor-alternar svg { transform:rotate(180deg); }
+/* Coluna do mapa mais enxuta para caber em notebook. */
+.pl-tres .pl-col-mapa .gw-etapas { padding:8px 12px; gap:4px; }
+.pl-tres .pl-col-mapa .gw-etapas li>span { height:24px; flex-basis:24px; font-size:12px; }
+.pl-tres .pl-col-mapa>.pl-topologia-fixa,.pl-tres .pl-col-mapa>.gw-etapas { flex-shrink:0; }
+.pl-tres .pl-col-mapa>.pl-agora, .pl-tres .pl-col-tarefas>.pl-agora { overflow-anchor:none; }
+.pl-tres .pl-col-mapa>.pl-agora, .pl-tres .pl-col-tarefas>.pl-agora { padding:12px 14px; gap:10px; }
+/* Topologia com roteadores na coluna estreita: setores, roteador(es) e setores de cima para baixo. */
+.pl-tres .lt-topologia .lt-mapa { flex-direction:column; align-items:stretch; }
+.pl-tres .lt-mapa>.lt-cabo, .pl-tres .lr-enlace { flex:0 0 14px; width:2px; height:14px; min-width:0; align-self:center; }
+.pl-tres .lr-enlace { flex-basis:24px; height:24px; }
+.pl-tres .lr-enlace i { top:50%; left:10px; transform:translateY(-50%); white-space:nowrap; }
+.pl-tres .lr-roteadores { flex-direction:column; align-items:center; }
+.pl-tres .lt-mapa>.lt-equip, .pl-tres .lr-roteador { align-self:center; }
+.pl-tres .lt-zona { flex-direction:column; align-items:stretch; }
+.pl-tres .lr-lado:last-child .lt-zona { flex-direction:column-reverse; }
+/* Nome do setor sempre em cima, na cor do setor, para identificar os PCs de cada lado. */
+.pl-tres .lr-zona>span { font-size:13px; font-weight:700; color:var(--cor-setor, #8f99a7); }
+.pl-tres .lt-pc strong { font-size:14px; }
+.pl-tres .lt-zona>.lt-cabo { flex:0 0 10px; width:2px; height:10px; min-width:0; align-self:center; }
+.pl-tres .lt-zona>.lt-equip { align-self:center; }
+.pl-tres .lt-pc { min-width:0; grid-template-columns:16px auto 1fr; }
+.pl-tres .lt-pc i { grid-column:2 / -1; justify-self:start; }
+/* Letras um pouco maiores nas três colunas. */
+.pl-tres .pl-agora p, .pl-tres .pl-pista { font-size:15px!important; line-height:1.5; }
+.pl-tres .pl-col-mapa .gw-etapas strong { font-size:13px; }
+.pl-tres .lt-tela { font-size:14px; }
+.pl-tres .lt-chamado, .pl-tres .lr-plano { font-size:15px; }
+/* O "Agora faça" nunca some: quem rola, se faltar altura, é a topologia. */
+.pl-tres .pl-col-mapa>.pl-topologia-fixa { flex:0 1 auto; min-height:120px; overflow:auto; overscroll-behavior:contain; }
+.pl-tres .pl-col-mapa>.pl-agora, .pl-tres .pl-col-tarefas>.pl-agora { flex:0 0 auto; max-height:55%; }
+
+/* Apresentação ao iniciar: fundo escuro e só a parte do passo acesa (acima do fundo). */
+.pl-tour-fundo { position:fixed; inset:0; z-index:40; background:rgba(3,5,8,.78); }
+.pl-tour.pl-tour-acao .pl-col-mapa>.pl-agora, .pl-tour.pl-tour-acao .pl-col-tarefas>.pl-tarefas,
+.pl-tour.pl-tour-mapa .pl-col-mapa>.pl-topologia-fixa { position:relative; z-index:41; box-shadow:0 0 0 3px #ffb020, 0 0 28px rgba(255,176,32,.35); border-radius:12px; }
+.pl-tour .pl-col-mapa, .pl-tour .pl-col-tarefas { overflow:visible; }
+.pl-tour-cartao { position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); z-index:42; width:min(420px, calc(100vw - 32px));
+  padding:18px 20px; border:2px solid #ffb020; border-radius:14px; background:#161b22; box-shadow:0 20px 50px rgba(0,0,0,.6); }
+.pl-tour-cartao>span { font-size:12px; font-weight:700; color:#ffb020; letter-spacing:.06em; }
+.pl-tour-cartao h2 { margin:4px 0 6px; font-size:20px; }
+.pl-tour-cartao p { margin:0 0 14px; font-size:15px; line-height:1.5; color:#d7dbe2; }
+.pl-tour-cartao>div { display:flex; gap:10px; align-items:center; }
+.pl-tour-ok { padding:9px 18px!important; border:0!important; border-radius:8px!important; background:#ff1f45!important; color:#fff!important; font-weight:700!important; cursor:pointer; }
+.pl-tour-pular { padding:9px 12px; border:1px solid #3a4350; border-radius:8px; background:transparent; color:#b8c0cd; font:inherit; cursor:pointer; }
+.pl-tres .lt-pc small, .pl-tres .lt-equip small { font-size:13px; }
+/* A topologia precisa caber inteira: o "Agora faça" já diz "Etapa N de M" e o Validar mostra o total, então a lista
+   de etapas sai da coluna. O nome do setor ganha espaço próprio no topo da zona. */
+.pl-tres .pl-col-mapa>.gw-etapas { display:none; }
+.pl-tres .lr-zona { padding-top:24px; }
+.pl-tres .lr-zona>span { top:5px; }
+
+/* "Agora faça": onde fazer e como saber que terminou. */
+.pl-agora-guia { display:flex; flex-direction:column; gap:5px; margin:10px 0 0; padding:9px 11px; border-radius:8px; background:rgba(0,0,0,.28); }
+.pl-agora-guia>div { display:grid; grid-template-columns:auto minmax(0,1fr); gap:8px; align-items:baseline; }
+.pl-agora-guia dt { font:700 11px/1.4 inherit; letter-spacing:.08em; text-transform:uppercase; color:#ffb020; white-space:nowrap; }
+.pl-agora-guia dd { margin:0; font-size:14px; line-height:1.45; color:#eef1f5; }
+
+/* Zonas dos setores em linha (PCs à esquerda, switch à direita): a topologia com três setores cabe na coluna. */
+.pl-tres .lr-zona, .pl-tres .lr-lado:last-child .lr-zona { flex-direction:row; align-items:center; gap:0; }
+.pl-tres .lr-zona>.lt-pcs { flex:1; min-width:0; }
+.pl-tres .lr-zona>.lt-cabo { flex:0 0 12px; width:12px; height:2px; align-self:center; }
+.pl-tres .lr-zona>.lt-equip { flex-shrink:0; }
+/* Plano com dois campos por setor (Lab 6): os dois lado a lado, o nome do setor em cima. */
+.pl-tres .lr-linha:has(> span:nth-child(3):last-child) { grid-template-columns:1fr 1fr; column-gap:10px; }
+.pl-tres .lr-linha:has(> span:nth-child(3):last-child) > span:first-child { grid-column:1 / -1; }
+
+/* "Agora faça" ao lado: a topologia usa a coluna da esquerda inteira. */
+.pl-tres .pl-col-mapa.pl-mapa-inteiro>.pl-topologia-fixa { flex:1 1 auto; max-height:none; }
+.pl-tres .pl-col-tarefas>.pl-agora { flex:0 0 auto; max-height:50%; padding:12px 14px; gap:10px; }
+
+/* Agora faça ao lado (Teste de carga) no notebook: o Agora faça aparece inteiro e o chamado rola embaixo dele,
+   sem repetir a frase do chamado, que já está na tela de início. */
+@media (max-height:820px) {
+  .pl-tres:has(.pl-mapa-inteiro) .pl-col-tarefas>.pl-agora { max-height:none; flex:0 0 auto; padding:10px 12px; gap:6px; }
+  .pl-tres:has(.pl-mapa-inteiro) .pl-agora-guia { font-size:13px; padding:6px 10px; }
+  .pl-tres:has(.pl-mapa-inteiro) .pl-col-tarefas>.pl-tarefas { flex:1 1 auto; min-height:0; overflow:auto; }
+  .pl-tres:has(.pl-mapa-inteiro) .pl-col-tarefas .lt-chamado blockquote { display:none; }
+}
+
+/* Agora faça ao lado (Teste de carga): Recolher/Expandir. Com o Link aberto, o "Agora faça" vira uma barra com o título
+   e o chamado sai de vista, para a conversa e o campo de pergunta caberem inteiros, inclusive no notebook. */
+.pl-tres .pl-col-tarefas>.pl-agora { position:relative; }
+.pl-agora-alternar { position:absolute; top:10px; right:12px; display:inline-flex; align-items:center; gap:4px; padding:4px 10px;
+  border:1px solid #6b2a36; border-radius:8px; color:#ffd5dc; background:#2a1117; font-size:12px; font-weight:700; cursor:pointer; z-index:1; }
+.pl-agora-alternar:hover { border-color:#ff4f6d; }
+.pl-agora-alternar[aria-expanded="true"] svg { transform:rotate(180deg); }
+.pl-tres .pl-col-tarefas>.pl-agora.pl-agora-recolhida { flex:0 0 auto; padding:10px 12px; gap:0; }
+.pl-agora-recolhida h2 { margin:2px 118px 0 0!important; font-size:16px!important; }
+.pl-tres .pl-col-tarefas>.pl-agora:not(.pl-agora-recolhida) .pl-agora-etiqueta { padding-right:118px; }
+.pl-tres .pl-col-tarefas.pl-link-aberto>.pl-tarefas { display:none; }
+.pl-tres .pl-col-tarefas.pl-link-aberto>.pl-tutor { flex:1 1 auto; min-height:0; }

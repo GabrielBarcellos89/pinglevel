@@ -1,0 +1,31 @@
+/* Bastidores da rede (tshark): recolhido abaixo do terminal; aberto, lista os pacotes em linguagem simples. */
+.bt-painel { flex-shrink:0; margin-top:10px; border:1px solid #2f4a5c; border-radius:10px; background:#0d151c; }
+.bt-painel.aberto { display:flex; flex-direction:column; min-height:0; max-height:48%; flex-shrink:1; }
+.bt-alternar { display:flex!important; align-items:center; gap:8px; width:100%; min-height:0!important; padding:9px 12px!important;
+  border:0!important; border-radius:10px!important; background:transparent!important; color:#cfe3f2!important; font:inherit; cursor:pointer; text-align:left; }
+.bt-alternar strong { font-size:14px; color:#8fd3ff; white-space:nowrap; }
+.bt-alternar span { flex:1; min-width:0; color:#9fb2c4; font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bt-alternar svg:last-child { flex-shrink:0; transition:transform .15s; }
+.bt-painel.aberto .bt-alternar svg:last-child { transform:rotate(180deg); }
+.bt-corpo { min-height:0; overflow:auto; overscroll-behavior:contain; padding:0 12px 12px; }
+.bt-escolha { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+.bt-escolha button { min-height:0!important; padding:4px 9px!important; border:1px solid #2f4a5c!important; border-radius:14px!important;
+  background:transparent!important; color:#9fb2c4!important; font:12px ui-monospace,Consolas,monospace!important; cursor:pointer; }
+.bt-escolha button[aria-pressed="true"] { border-color:#8fd3ff!important; color:#e6f4ff!important; background:#13283a!important; }
+.bt-cabecalho { margin:0 0 8px; color:#9fb2c4; font-size:13px; }
+.bt-cabecalho b { color:#e6f4ff; font-family:ui-monospace,Consolas,monospace; font-weight:600; }
+.bt-vazio { margin:0 0 8px; color:#c4ccd8; font-size:14px; line-height:1.5; }
+.bt-pacotes { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
+.bt-pacotes li { display:grid; grid-template-columns:76px minmax(0,1fr); gap:10px; align-items:center; padding:6px 9px; border-left:3px solid #5b6b7b;
+  border-radius:6px; background:#111b24; }
+.bt-pacotes p { margin:0; color:#e1e8ef; font-size:14px; line-height:1.45; }
+.bt-protocolo { display:flex; flex-direction:column; font:700 12px ui-monospace,Consolas,monospace; color:#cfe3f2; }
+.bt-protocolo small { font:400 11px inherit; color:#8b9aa9; }
+.bt-arp { border-left-color:#f5b942!important; }
+.bt-icmp { border-left-color:#4fd18b!important; }
+.bt-dns { border-left-color:#8fd3ff!important; }
+.bt-dhcp { border-left-color:#c792ea!important; }
+.bt-tecnico { margin-top:8px; min-height:0!important; padding:4px 10px!important; border:1px solid #2f4a5c!important; background:transparent!important;
+  color:#8fd3ff!important; font-size:12px!important; border-radius:8px!important; cursor:pointer; }
+.bt-saida { margin:8px 0 0; padding:9px 11px; overflow-x:auto; border:1px solid #26313b; border-radius:8px; background:#070b0f; color:#b9d0c7;
+  font:12px/1.5 ui-monospace,Consolas,monospace; white-space:pre; }

@@ -1,0 +1,177 @@
+/* Somente a rota de prévia. A tela oficial e suas regras não são substituídas. */
+.previa-titulo-curto { display: none; }
+.laboratorio-pagina.lab-previa {
+  width: 100%; max-width: 1800px; height: auto; min-height: calc(100dvh - 64px);
+  padding: 12px clamp(12px, 1.6vw, 26px) 26px; overflow: visible;
+  display: flex; flex-direction: column; gap: 12px; container-type: inline-size;
+}
+.previa-layout-aviso { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 14px; padding: 9px 13px; border: 1px solid #63303a; border-radius: 9px; background: #1b1115; color: #dfe2e7; font-size: 13px; line-height: 1.4; }
+.previa-layout-aviso strong { color: var(--vermelho); font-size: 12px; letter-spacing: .08em; }
+.previa-layout-controles { display: flex; flex-wrap: wrap; gap: 8px; }
+.previa-layout-controles button { padding: 8px 12px; border: 1px solid var(--borda); border-radius: 8px; background: #14181e; color: var(--texto); font: inherit; font-size: 13px; cursor: pointer; min-height: 36px; }
+.previa-layout-controles button[aria-pressed="true"] { border-color: var(--vermelho); }
+.previa-layout-controles button:last-child { margin-left: auto; }
+.lab-previa button:focus-visible, .lab-previa summary:focus-visible, .lab-previa input:focus-visible { outline: 2px solid var(--vermelho); outline-offset: 3px; }
+.lab-previa .lab-cabecalho { min-height: 0; padding: 12px 16px; gap: 16px; flex-wrap: wrap; }
+.lab-previa .lab-cabecalho > div:first-child { flex: 1 1 340px; min-width: 0; }
+.lab-previa .lab-cabecalho h1 { margin: 4px 0; font-size: clamp(21px, 1.8vw, 28px); line-height: 1.2; }
+.lab-previa .lab-cabecalho p { font-size: 13px; margin: 0; }
+.lab-previa .lab-cabecalho-acoes { gap: 8px; min-width: 0; flex-direction: row; flex-wrap: wrap; }
+.lab-previa .lab-acoes-superiores { flex-wrap: wrap; }
+.lab-previa .lab-acoes-superiores .lab-acao-principal { min-width: 145px; min-height: 38px; padding: 0 10px; }
+.lab-previa .lab-tempo { padding: 4px 10px; gap: 8px; }
+.lab-previa .lab-tempo strong { font-size: 23px; }
+.lab-previa .lab-aviso, .lab-previa .lab-aviso-tempo { margin-top: 0; }
+.lab-previa .lab-grade { flex: none; display: flex; flex-direction: column; gap: 12px; margin: 0; min-height: 0; }
+.lab-previa .lab-topologia-painel { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.8fr); grid-template-areas: 'cabeca nos' 'descricao nos'; gap: 5px 20px; padding: 12px 16px; }
+.lab-previa .lab-painel-titulo { grid-area: cabeca; flex-wrap: wrap; gap: 6px; }
+.lab-previa .lab-painel-titulo h2 { font-size: 17px; }
+.lab-previa .lab-instrucao-topologia { grid-area: descricao; font-size: 12px; line-height: 1.45; margin: 0; }
+.lab-previa .lab-topologia { grid-area: nos; width: 100%; max-width: 850px; margin: 0; justify-self: end; }
+.lab-previa .lab-no { flex-basis: 145px; min-height: 72px; gap: 5px; }
+.lab-previa .lab-no strong { font-size: 13px; }
+.lab-previa .lab-ip-no { font-size: 12px; }
+.lab-previa .lab-experimento { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); height: clamp(380px, 56dvh, 620px); min-height: 380px; gap: 12px; }
+.lab-previa .lab-terminal-painel { width: 100%; height: 100%; min-height: 380px; min-width: 0; }
+.lab-previa .lab-terminal-cabecalho { flex-basis: 44px; padding: 0 14px; }
+.lab-previa .lab-terminal-cabecalho strong { font-size: 13px; }
+.lab-previa .lab-terminal-saida { height: auto; min-height: 0; flex: 1 1 0; font-size: 14px; line-height: 1.6; padding: 14px; }
+.lab-previa .lab-comando { padding: 10px; gap: 8px; }
+.lab-previa .lab-comando input { font-size: 14px; height: 44px; }
+.lab-previa .lab-comando button { min-height: 44px; }
+.previa-bastidores-host { min-width: 0; min-height: 0; height: 100%; }
+.previa-bastidores-host[hidden] { display: none; }
+.lab-previa .lab-bastidores { height: 100%; min-height: 0; max-height: none; }
+.lab-previa .lab-bastidores-corpo { padding: 12px; }
+.lab-previa .lab-bastidores-vazio, .lab-previa .lab-aprendizagem p, .lab-previa .lab-aprendizagem-pergunta label, .lab-previa .lab-aprendizagem-pergunta legend, .lab-previa .lab-bastidores-resumo p { font-size: 14px; line-height: 1.5; }
+.lab-previa .lab-aprendizagem h3 { font-size: 14px; }
+.lab-previa .lab-bastidores-eventos p { font-size: 13px; }
+.lab-previa .lab-missao-painel.fechado { position: static; align-self: flex-end; width: auto; height: auto; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.lab-previa .lab-link-flutuante { width: 64px; height: 64px; }
+.lab-previa .lab-link-flutuante img { width: 58px; height: 58px; }
+.lab-previa .lab-progresso-painel { padding: 12px 16px; overflow: visible; min-height: 0; height: auto; }
+.previa-etapa-resumo { margin: 8px 0; color: #dfe2e7; font-size: 14px; }
+.previa-todas-etapas summary { cursor: pointer; color: #b8bec7; font-size: 13px; padding: 6px 0; }
+.previa-todas-etapas[open] .lab-etapas { margin-top: 10px; }
+.lab-previa .lab-etapas li { min-height: 120px; }
+.lab-previa .lab-etapas h3 { font-size: 14px; }
+.lab-previa .lab-etapas p { font-size: 13px; }
+.lab-previa.sem-bastidores .lab-experimento { grid-template-columns: minmax(0, 1fr); }
+.lab-previa .lab-cabecalho > div > span, .lab-previa .lab-painel-titulo > div > span, .lab-previa .lab-bastidores-cabecalho > div > span { color: var(--vermelho); }
+.aplicacao:has(.lab-previa) .topbar { min-height: 64px; padding: 0 24px; }
+.aplicacao:has(.lab-previa-foco) { padding-left: 0; }
+.aplicacao:has(.lab-previa-foco) > .sidebar,
+.aplicacao:has(.lab-previa-foco) .topbar { display: none; }
+.lab-previa.lab-previa-foco { max-width: none; min-height: 100dvh; padding: 10px 14px; gap: 10px; }
+.lab-previa-foco .lab-cabecalho { display: none; }
+.lab-previa-foco .lab-instrucao-topologia { display: none; }
+.lab-previa-foco .lab-topologia-painel { padding: 8px 14px; }
+.lab-previa-foco .lab-no { min-height: 62px; }
+.lab-previa-foco .lab-experimento { height: max(330px, calc(100dvh - 210px)); min-height: 330px; }
+.lab-previa-foco .lab-terminal-painel { min-height: 330px; }
+@container (max-width: 900px) {
+  .lab-previa .lab-experimento { grid-template-columns: minmax(0, 1fr); height: auto; }
+  .lab-previa .lab-terminal-painel { height: 380px; }
+  .lab-previa .previa-bastidores-host { height: 400px; }
+  .lab-previa.sem-bastidores .lab-experimento { height: 380px; }
+  .lab-previa .lab-topologia-painel { grid-template-columns: 1fr; grid-template-areas: 'cabeca' 'nos' 'descricao'; }
+  .lab-previa .lab-topologia { justify-self: start; }
+}
+
+/* Revisão: o campo precisa caber na abertura NORMAL, não só no modo foco. */
+@media (min-width: 1000px) {
+  .laboratorio-pagina.lab-previa .lab-experimento { min-height: 0; grid-template-columns: minmax(0, 1.1fr) minmax(270px, .9fr); }
+  .laboratorio-pagina.lab-previa .lab-terminal-painel { height: 100%; min-height: 0; }
+  .laboratorio-pagina.lab-previa .previa-bastidores-host { height: 100%; min-height: 0; }
+  .laboratorio-pagina.lab-previa.sem-bastidores .lab-experimento { grid-template-columns: minmax(0, 1fr); }
+  .laboratorio-pagina.lab-previa .lab-topologia-painel { grid-template-columns: 150px minmax(0, 1fr); grid-template-areas: 'cabeca nos'; gap: 8px 12px; }
+  .laboratorio-pagina.lab-previa .lab-instrucao-topologia { display: none; }
+  .laboratorio-pagina.lab-previa .lab-topologia { justify-self: end; }
+}
+@media (min-width: 1000px) and (max-height: 850px) {
+  .aplicacao:has(.lab-previa) .topbar { min-height: 48px; }
+  .laboratorio-pagina.lab-previa { padding-top: 8px; padding-bottom: 12px; gap: 8px; }
+  .lab-previa .previa-layout-aviso { padding: 5px 10px; font-size: 12px; }
+  .lab-previa .previa-layout-controles { gap: 6px; }
+  .lab-previa .previa-layout-controles button { min-height: 30px; padding: 5px 10px; font-size: 12px; }
+  .lab-previa .lab-cabecalho { padding: 7px 12px; gap: 8px; flex-wrap: nowrap; }
+  .lab-previa .lab-cabecalho > div:first-child { flex: 1 1 170px; }
+  .lab-previa .lab-cabecalho h1 { font-size: 20px; margin: 3px 0 0; }
+  .lab-previa .lab-cabecalho > div > span { font-size: 12px; }
+  .lab-previa .previa-titulo-completo, .lab-previa .lab-cabecalho p { display: none; }
+  .lab-previa .previa-titulo-curto { display: inline; }
+  .lab-previa .lab-cabecalho-acoes { flex-wrap: nowrap; }
+  .lab-previa .lab-acoes-superiores { flex-wrap: nowrap; gap: 6px; }
+  .lab-previa .lab-tempo { padding: 3px 8px; }
+  .lab-previa .lab-tempo strong { font-size: 20px; }
+  .lab-previa .lab-acoes-superiores .lab-acao-principal { min-width: 125px; min-height: 34px; }
+  .laboratorio-pagina.lab-previa .lab-topologia-painel { padding: 6px 12px; }
+  .lab-previa .lab-no { flex-basis: 130px; min-height: 58px; gap: 3px; }
+  .lab-previa .lab-no svg { width: 21px; height: 21px; }
+  .lab-previa .lab-no strong { font-size: 12px; }
+  .lab-previa .lab-grade { gap: 8px; }
+  .lab-previa .lab-terminal-cabecalho { flex-basis: 40px; }
+  .lab-previa .lab-comando { padding: 8px; }
+  .lab-previa .lab-comando input, .lab-previa .lab-comando button { height: 40px; min-height: 40px; }
+}
+
+/* Organização aprovada: progresso, topologia e Link na mesma faixa. */
+.laboratorio-pagina.lab-previa .lab-topologia-painel.previa-faixa-missao {
+  grid-template-columns: 294px minmax(0, 1fr) 150px; grid-template-areas: none;
+  padding: 8px 14px; gap: 18px; align-items: center;
+}
+.previa-progresso-integrado { min-width: 0; padding-right: 16px; border-right: 1px solid #30343c; }
+.previa-progresso-linha { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.previa-progresso-linha > span { color: var(--vermelho); font-size: 12px; letter-spacing: .8px; font-weight: 800; }
+.previa-progresso-linha > strong { color: #c2c7cf; font-size: 12px; white-space: nowrap; }
+.lab-previa .previa-progresso-integrado .lab-progresso { height: 4px; margin: 5px 0 6px; }
+.previa-etapa-integrada { display: flex; align-items: center; gap: 8px; }
+.previa-etapa-numero { flex: 0 0 26px; height: 26px; display: grid; place-items: center; border: 1px solid var(--vermelho); border-radius: 50%; background: #32131b; color: #fff; font-size: 12px; font-weight: 700; }
+.previa-etapa-integrada > div { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.previa-etapa-integrada small { color: #969eaa; font-size: 12px; letter-spacing: .6px; }
+.previa-etapa-integrada strong { color: var(--texto); font-size: 14px; line-height: 1.2; }
+.previa-progresso-inferior { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 4px; }
+.previa-progresso-inferior button { border: 0; padding: 0; color: #d1d6de; background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+.previa-progresso-inferior button span { margin-left: 6px; }
+.previa-progresso-inferior b { display: flex; align-items: center; gap: 5px; color: #f2bd35; font-size: 12px; }
+.previa-topologia-centro { min-width: 0; }
+.previa-rede-legenda { display: block; margin-bottom: 5px; color: #a2a9b5; font-size: 12px; letter-spacing: 1px; font-weight: 700; }
+.laboratorio-pagina.lab-previa .previa-topologia-centro .lab-topologia { grid-area: auto; width: 100%; margin: 0; }
+.previa-ajuda-integrada { display: flex; align-items: center; gap: 8px; padding: 0 0 0 12px; min-height: 60px; border: 0; border-left: 1px solid #30343c; background: transparent; color: var(--texto); text-align: left; cursor: pointer; }
+.previa-ajuda-integrada img { width: 42px; height: 60px; object-fit: contain; }
+.previa-ajuda-integrada > span { display: flex; flex-direction: column; gap: 6px; }
+.previa-ajuda-integrada strong { font-size: 12px; line-height: 1.4; }
+.previa-ajuda-integrada small { font-size: 12px; color: #c9ced6; }
+.lab-previa .previa-etapas-popover { width: min(460px, calc(100vw - 32px)); max-height: calc(100dvh - 70px); padding: 16px; border: 1px solid #63303a; border-radius: 12px; color: var(--texto); background: #101318; overflow: auto; box-shadow: 0 12px 60px #0009; }
+.previa-etapas-popover::backdrop { background: #0006; }
+.previa-etapas-popover > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.previa-etapas-popover h2 { margin: 0; font-size: 18px; }
+.previa-etapas-popover > header button { padding: 6px 10px; border: 1px solid var(--borda); border-radius: 6px; color: var(--texto); background: #171b21; font: inherit; font-size: 13px; cursor: pointer; }
+.lab-previa .previa-etapas-popover .lab-etapas { grid-template-columns: 1fr; gap: 8px; }
+.lab-previa .previa-etapas-popover .lab-etapas li { min-height: 0; }
+@container (max-width: 1050px) {
+  .laboratorio-pagina.lab-previa .lab-topologia-painel.previa-faixa-missao { grid-template-columns: 220px minmax(0, 1fr) 120px; padding: 6px 10px; gap: 12px; }
+  .previa-progresso-integrado { padding-right: 10px; }
+  .previa-progresso-linha > span { font-size: 12px; letter-spacing: .5px; }
+  .previa-progresso-linha > strong { font-size: 12px; }
+  .previa-etapa-integrada strong { font-size: 13px; }
+  .lab-previa .previa-topologia-centro .lab-no { flex-basis: 110px; min-height: 58px; }
+  .lab-previa .previa-topologia-centro .lab-enlace { min-width: 12px; }
+  .lab-previa .previa-topologia-centro .lab-ip-no { font-size: 12px; gap: 3px; }
+  .lab-previa .previa-topologia-centro .lab-ip-no span { font-size: 12px; padding: 2px 3px; }
+  .previa-ajuda-integrada { padding-left: 8px; gap: 5px; }
+  .previa-ajuda-integrada img { width: 32px; height: 52px; }
+}
+
+@media (min-width: 1000px) and (max-height: 600px) {
+  .lab-previa .lab-cabecalho > div:first-child > span { display: none; }
+  .lab-previa .lab-cabecalho h1 { margin-top: 0; }
+}
+
+@media (min-width: 1000px) and (max-height: 600px) {
+  .lab-previa .previa-progresso-integrado .lab-progresso { margin: 3px 0; }
+  .previa-etapa-integrada small { line-height: 1; }
+  .lab-previa .previa-topologia-centro .lab-no { min-height: 50px; gap: 2px; }
+  .lab-previa .previa-topologia-centro .lab-no svg { width: 17px; height: 17px; }
+  .previa-rede-legenda { margin-bottom: 4px; }
+}

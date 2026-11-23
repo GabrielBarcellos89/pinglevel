@@ -1,0 +1,268 @@
+/* Labs 5 e 6: reaproveitam o visual do Lab 4 (LaboratorioTerminal.css); aqui só a topologia de setores e o plano. */
+.lr-mapa { align-items:stretch; }
+.lr-lado { display:flex; flex-direction:column; justify-content:center; gap:8px; }
+.lr-zona { border-color:color-mix(in srgb, var(--cor-setor) 55%, transparent); }
+.lr-zona>span { color:var(--cor-setor); font-weight:700; }
+.lr-mapa>.lt-cabo { align-self:center; }
+.gw-v2 .lr-roteador { align-self:center; min-height:0; cursor:pointer; font:inherit; }
+.gw-v2 .lr-roteador.selecionado { background:#22161b; box-shadow:0 0 0 2px rgba(255,79,109,.35); }
+.lr-lab .lt-pc i { font-family:Consolas,monospace; }
+
+.lr-plano { padding:14px 16px; margin-bottom:12px; border:1px solid #33404d; border-radius:10px; background:#0f1318; }
+.lr-plano.conferido { border-color:#2f7d55; }
+.lr-plano>header { display:flex; align-items:center; gap:8px; margin-bottom:10px; color:#c4ccd8; }
+.lr-plano>header span { font-size:12px; font-weight:750; letter-spacing:.1em; }
+.lr-plano>header b { display:flex; align-items:center; gap:4px; margin-left:auto; color:#6fe0a0; font-size:12px; font-weight:600; }
+.lr-tabela { display:grid; gap:6px; margin-bottom:10px; }
+.lr-linha { display:grid; grid-template-columns:200px repeat(var(--colunas), minmax(0,1fr)); gap:10px; align-items:center; }
+.lr-cabecalho { font-size:12px; color:#aab3c0; }
+.lr-linha>span:first-child { display:flex; flex-direction:column; font-weight:600; }
+.lr-linha small { color:#aab3c0; font-weight:400; font-size:12px; }
+.lr-modelo code { color:#9fb2c4; font:13px Consolas,monospace; }
+.gw-v2 .lr-linha input { min-height:34px; padding:6px 10px; font:14px Consolas,monospace; }
+.gw-v2 .lr-linha input.erro { border-color:#ff4f6d; box-shadow:0 0 0 1px #ff4f6d; }
+.gw-v2 .lr-plano.conferido input:disabled { color:#c8f0da; background:#0f1a15; border-color:#2f7d55; }
+
+@media (max-width:1050px) {
+  .lr-linha { grid-template-columns:1fr; }
+}
+
+/* Lab 7: dois roteadores ligados por um enlace. */
+.lr-roteadores { display:flex; align-items:center; }
+.lr-enlace { position:relative; flex:0 0 70px; }
+.lr-enlace i { position:absolute; top:-16px; left:50%; transform:translateX(-50%); font:10px Consolas,monospace; font-style:normal; color:#8f99a7; }
+.lr-rotas { max-width:230px; white-space:normal !important; text-align:center; }
+/* Mapa da LAN (Lab 2): o switch no alto e um cabo até cada PC. */
+.lr-lan { display:flex; justify-content:center; padding:4px 0 2px; }
+.lr-lan-sala { position:relative; display:flex; flex-direction:column; align-items:center; gap:22px; padding:30px 28px 18px; border:1px dashed #6b2c3a; border-radius:14px; }
+.lr-lan-nome { position:absolute; top:8px; left:14px; color:#ff6b7c; font-size:14px; font-weight:700; }
+.lr-lan-switch { position:relative; display:flex; align-items:center; gap:8px; padding:9px 18px; border:1px solid #3d4552; border-radius:10px; background:#161a20; color:#e9ecf1; font-size:16px; }
+.lr-lan-switch::after { content:''; position:absolute; left:50%; top:100%; width:2px; height:11px; background:#fa233b; }
+.lr-lan-pcs { display:flex; gap:28px; padding-top:11px; }
+.lr-lan-pc { position:relative; display:flex; flex-direction:column; align-items:center; gap:4px; width:200px; padding:12px 10px; border:1px solid #3a404b; border-radius:12px; background:#14171c; color:#eef0f3; cursor:pointer; }
+.lr-lan-pc::before { content:''; position:absolute; bottom:100%; left:50%; width:2px; height:13px; background:#fa233b; }
+.lr-lan-pc::after { content:''; position:absolute; top:-13px; left:-14px; right:-14px; height:2px; background:#fa233b; }
+.lr-lan-pc:first-child::after { left:50%; }
+.lr-lan-pc:last-child::after { right:50%; }
+.lr-lan-pc strong { font-size:16px; }
+.lr-lan-pc small { color:#b8bec8; font-family:ui-monospace, monospace; font-size:14px; }
+.lr-lan-pc.selecionado { border-color:#fa233b; background:#2a1219; box-shadow:0 0 0 2px rgba(250,35,59,.25); }
+.lr-lan-pc:disabled { cursor:default; opacity:.75; }
+.lr-sucesso { display:flex; align-items:center; gap:18px; }
+.lr-sucesso img { flex-shrink:0; width:110px; height:auto; }
+.lr-sucesso strong { font-size:1.15rem; }
+
+/* Tela de início (Labs 2 e 5 a 10): a missão com a arte da trilha e, abaixo, o Link explica como o lab funciona. */
+.lr-missao { grid-template-columns:minmax(0,1fr) auto; align-items:center; }
+.lr-missao-arte { width:clamp(180px, 22vw, 300px); aspect-ratio:1; object-fit:cover; border-radius:14px; border:1px solid #3c2730; }
+.lr-briefing { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr); gap:16px; }
+.lr-briefing-link { display:flex; align-items:center; gap:20px; padding:22px; border:1px solid #2c343f; border-radius:14px; background:#12161c; }
+.lr-briefing-link > img { flex-shrink:0; width:clamp(120px, 12vw, 170px); height:auto; }
+.lr-balao { position:relative; flex:1; padding:16px 20px; border:1px solid #5a2532; border-radius:14px; background:#1a1218; }
+.lr-balao::before { content:''; position:absolute; left:-9px; top:40px; width:16px; height:16px; border-left:1px solid #5a2532; border-bottom:1px solid #5a2532; background:#1a1218; transform:rotate(45deg); }
+.lr-balao strong { display:block; margin-bottom:8px; color:#ff6b7c; font-size:17px; }
+.lr-balao ul { display:flex; flex-direction:column; gap:8px; margin:0; padding-left:18px; color:#d7dbe2; font-size:15px; line-height:1.5; }
+.lr-balao b { color:#f2f3f6; }
+.lr-briefing-fila { padding:22px; border:1px solid #2c343f; border-radius:14px; background:#12161c; }
+.lr-briefing-fila h2 { margin:0 0 12px; font-size:17px; }
+@media (max-width: 1100px) {
+  .lr-missao, .lr-briefing { grid-template-columns:1fr; }
+  .lr-missao-arte { display:none; }
+}
+
+.lr-plano-descricao { margin:4px 0 12px; max-width:90ch; color:#c4ccd8; font-size:15px; line-height:1.55; }
+.lt-chamado.lr-chegou { animation:lr-chegou 2.4s ease-out; }
+@keyframes lr-chegou { 0%, 40% { box-shadow:0 0 0 3px rgba(250,35,59,.55); } 100% { box-shadow:0 0 0 0 rgba(250,35,59,0); } }
+@media (prefers-reduced-motion: reduce) { .lt-chamado.lr-chegou { animation:none; } }
+.lr-campo-rotulo { display:none; }
+.pl-tres .lr-campo-rotulo { display:block; margin:2px 0 3px; }
+
+/* Lab 5: régua do /24 em blocos e dicas por campo quando o plano não confere. */
+.lr-regua { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; margin:8px 0 12px; padding:0; list-style:none; }
+.lr-regua li { display:flex; flex-direction:column; gap:1px; padding:7px 8px; border:1px solid #3a4350; border-radius:7px; background:#141a21; font-size:13px; }
+.lr-regua li:first-child { border-color:#b52d46; background:#2a1118; }
+.lr-regua li:nth-child(2) { border:2px dashed #ffb020; }
+.lr-regua li.livre { opacity:.6; }
+.lr-regua b { font-size:11px; color:#a2acba; letter-spacing:.04em; }
+.lr-regua small { font-size:12px; color:#c4ccd8; }
+.lr-dicas-plano { margin:6px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:4px; font-size:14px; color:#ffd27a; }
+.lr-dicas-plano b { color:#ffe2a6; }
+
+/* Lab 6: tabela de tamanhos ao lado do plano. */
+.lr-prefixos { width:100%; margin:4px 0 12px; border-collapse:collapse; font-size:14px; }
+.lr-prefixos th { padding:4px 8px; text-align:left; font-size:12px; font-weight:600; color:#a2acba; border-bottom:1px solid #2c343f; }
+.lr-prefixos td { padding:4px 8px; border-bottom:1px solid #1d232b; }
+.lr-prefixos code { font:600 14px Consolas,monospace; color:#ff8a9d; }
+
+/* Teste de carga: folhas que a impressora recebeu. */
+.lr-folhas { display:flex; flex-direction:column; gap:6px; margin-top:10px; padding:10px 12px; border:1px dashed #3a4350; border-radius:8px; }
+.lr-folhas > b { display:flex; align-items:center; gap:6px; font-size:13px; letter-spacing:.04em; color:#a2acba; }
+.lr-folhas ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+.lr-folhas li { display:flex; flex-direction:column; padding:8px 10px; border-radius:6px; background:#f4f1e8; color:#1b1f24; }
+.lr-folhas q { font:600 15px Consolas,monospace; quotes:none; }
+.lr-folhas small { font-size:12px; color:#5b6470; }
+.lr-folhas p { margin:0; font-size:14px; color:#c4ccd8; }
+
+/* Lab 8: o mesmo diagrama, com dois PCs por setor e um só switch no meio, ligado aos dois barramentos. */
+.tq-lan .tq-fila { grid-template-columns:repeat(var(--n, 2), minmax(0,1fr)); }
+.tq-lan .tq-fila::before { left:calc(50% / var(--n, 2)); right:calc(50% / var(--n, 2)); }
+.tq-lan .tq-fila::after { content:''; position:absolute; left:calc(50% - 1px); width:2px; height:calc(var(--pad) + 2px); background:var(--cabo); }
+.tq-lan .tq-cima .tq-fila::after { top:100%; }
+.tq-lan .tq-baixo .tq-fila::after { bottom:100%; }
+.tq-lan .tq-baixo .tq-predio-nome { order:2; margin:8px 0 0; }
+.tq-equip > button { display:flex; flex-direction:column; align-items:center; min-width:0; padding:2px 4px; border:0; border-radius:8px;
+  background:none; color:inherit; font:inherit; cursor:pointer; }
+.tq-equip > button:disabled { cursor:default; }
+.tq-equip > button:not(:disabled):hover .tq-icone { border-color:#6b7787; }
+.tq-equip > button:focus-visible { outline:2px solid #4c9dff; outline-offset:2px; }
+.tq-equip.aguardando .tq-icone { border-color:#ff3656; border-style:dashed; background:#24111a; }
+.tq-lan-centro { position:relative; display:flex; justify-content:center; padding:20px 0; }
+.tq-lan-centro::before, .tq-lan-centro::after { content:''; position:absolute; left:calc(50% - 1px); width:2px; height:20px; background:var(--cabo); }
+.tq-lan-centro::before { top:0; }
+.tq-lan-centro::after { bottom:0; }
+.tq-lan-switch { position:relative; z-index:1; display:flex; flex-direction:column; align-items:stretch; gap:2px; padding:8px 14px;
+  border:1.5px solid #4a5462; border-radius:10px; background:#151a21; color:#d7dbe2; font:inherit; cursor:pointer; text-align:left; }
+.tq-lan-switch:disabled { cursor:default; }
+.tq-lan-switch-nome { position:relative; display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:2px; }
+.tq-lan-switch-nome svg { color:#9fb3c8; }
+.tq-lan-switch-nome strong { font-size:14px; color:#eef1f5; }
+.tq-lan-switch-nome b { display:grid; place-items:center; width:18px; height:18px; border-radius:50%; background:#ff3656; color:#fff; font-size:12px; }
+.tq-lan-switch small { font:12px Consolas,monospace; white-space:nowrap; color:#c4ccd8; }
+.tq-lan-switch small b { color:#ff8a9d; font-weight:600; }
+.tq-lan-switch.selecionado { border-color:#4c9dff; box-shadow:0 0 0 4px rgba(76,157,255,.15); }
+.tq-lan-switch.aguardando { border-color:#ff3656; border-style:dashed; }
+.tq-lan-fixo { cursor:default; }
+/* Três equipamentos por fila: nomes podem quebrar a linha. Fonte um pouco maior que a do Teste de carga (22/11/2026). */
+.tq-lan .tq-equip strong { white-space:normal; font-size:14px; }
+.tq-lan .tq-equip code { font-size:12.5px; }
+.tq-lan .tq-equip small { font-size:12px; }
+.tq-lan .tq-predio-nome strong { font-size:15px; }
+.tq-lan-switch small { font-size:13px !important; }
+.tq-equip em.tq-chamado-atual, .tq-equip em.tq-chamado-fila { margin-top:4px; padding:1px 7px; font-size:11px; letter-spacing:0;
+  text-transform:none; white-space:nowrap; }
+.tq-lan .tq-equip em.tq-chamado-atual { color:#1b0a0e; background:#ff8a9d; }
+.tq-lan .tq-equip em.tq-chamado-fila { color:#c4ccd8; background:#2a313b; font-weight:700; }
+.tq-lan-lateral .tq-lan-switch { padding:6px 10px; }
+.tq-lan-switch-nome svg { width:18px; height:18px; }
+/* Lab 9: o roteador fica ao lado do switch, ligado por um cabo horizontal. */
+.tq-lan-lateral { position:absolute; left:calc(50% + 48px); top:50%; transform:translateY(-50%); display:flex; align-items:center; z-index:1; }
+.tq-lan-cabo-lateral { width:22px; height:2px; background:var(--cabo); }
+/* Lab 10: roteador e servidor intranet numa coluna à direita do switch; o cabo sai do switch por trás da coluna. */
+.tq-diagrama.tq-lan-com-coluna { padding-right:126px; }
+.tq-lan-com-coluna .tq-lan-switch:not(.tq-lan-coluna .tq-lan-switch)::after { content:''; position:absolute; left:100%; top:50%; width:60px;
+  height:2px; background:var(--cabo); z-index:-1; }
+.tq-lan-coluna { position:absolute; left:calc(100% + 6px); top:50%; transform:translateY(-48px); width:118px; display:flex;
+  flex-direction:column; align-items:stretch; z-index:2; }
+.tq-lan-coluna-item { display:flex; flex-direction:column; align-items:stretch; }
+.tq-lan-coluna .tq-lan-switch { padding:6px 8px; }
+.tq-lan-coluna .tq-lan-switch small { font-size:12.5px !important; }
+.tq-lan-cabo-vertical { align-self:center; width:2px; height:14px; background:var(--cabo); }
+
+/* Teste de carga: diagrama de rede. Prédio A em cima, roteador no meio, Prédio B embaixo; em cada prédio o switch
+   liga os três equipamentos por um barramento. Os cabos são bordas e pseudo-elementos (vermelho, como nos outros labs). */
+.tq-topologia { display:flex; flex-direction:column; }
+.pl-mapa-inteiro>.pl-topologia-fixa { display:flex; flex-direction:column; }
+.pl-mapa-inteiro .tq-topologia { flex:1 1 auto; }
+.tq-gw-curto { display:none; }
+/* Coluna estreita (notebook): o gateway só com o último número; a rede está no nome do prédio. */
+@media (max-width:1500px) { .tq-gw-longo { display:none; } .tq-gw-curto { display:inline; } }
+.tq-diagrama { --cabo:#ff173b; --lado:18px; flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; padding:4px 2px 8px; }
+.tq-predio { --cor:#3a4350; --pad:10px; position:relative; display:flex; flex-direction:column; align-items:center; padding:var(--pad) 6px;
+  border:1.5px dashed var(--cor); border-radius:12px; background:rgba(255,255,255,.015); }
+.tq-predio-a { --cor:#ff4f6d; }
+.tq-predio-b { --cor:#2fbf71; }
+.tq-predio-nome { align-self:flex-start; margin:0 0 6px; font-size:13px; color:#a2acba; }
+.tq-predio-nome strong { color:var(--cor); font-size:14px; }
+.tq-predio-nome code { font:12px Consolas,monospace; }
+.tq-cima .tq-predio-nome { order:0; }
+.tq-cima .tq-fila { order:1; }
+.tq-cima .tq-switch { order:2; }
+/* No Prédio B o nome vai para baixo: o switch fica colado à borda de cima, de onde vem o cabo do roteador. */
+.tq-baixo .tq-switch { order:0; }
+.tq-baixo .tq-fila { order:1; }
+.tq-baixo .tq-predio-nome { order:2; margin:8px 0 0; }
+.tq-switch { position:relative; z-index:1; display:flex; align-items:center; gap:6px; padding:5px 12px; border:1.5px solid #4a5462;
+  border-radius:8px; background:#1a2029; color:#dfe4ea; font-size:13px; font-weight:700; }
+.tq-switch svg { color:#9fb3c8; }
+/* Do switch até a borda do prédio (atravessando a borda), onde encontra o cabo do roteador. */
+.tq-cima .tq-switch::after { content:''; position:absolute; left:calc(50% - 1px); top:100%; width:2px; height:calc(var(--pad) + 3px); background:var(--cabo); }
+.tq-baixo .tq-switch::before { content:''; position:absolute; left:calc(50% - 1px); bottom:100%; width:2px; height:calc(var(--pad) + 3px); background:var(--cabo); }
+.tq-fila { position:relative; width:100%; margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:0; }
+/* Barramento do switch: liga o centro da 1ª à 3ª coluna; cada equipamento desce (ou sobe) até ele. */
+.tq-fila::before { content:''; position:absolute; left:calc(100% / 6); right:calc(100% / 6); height:2px; background:var(--cabo); }
+.tq-cima .tq-fila { padding-bottom:var(--lado); }
+.tq-cima .tq-fila::before { bottom:0; }
+.tq-baixo .tq-fila { padding-top:var(--lado); }
+.tq-baixo .tq-fila::before { top:0; }
+.tq-equip { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; min-width:0; }
+.tq-equip::before { content:''; position:absolute; left:calc(50% - 1px); width:2px; height:var(--lado); background:var(--cabo); }
+.tq-cima .tq-equip::before { top:100%; }
+.tq-baixo .tq-equip::before { bottom:100%; }
+.tq-icone { position:relative; display:grid; place-items:center; width:42px; height:42px; margin-bottom:4px; border:2px solid #3e4855;
+  border-radius:50%; background:#141920; color:#d5dce5; }
+.tq-icone b { position:absolute; top:-6px; right:-6px; display:grid; place-items:center; width:18px; height:18px; border-radius:50%;
+  background:#ff4f6d; color:#fff; font-size:12px; }
+.tq-equip strong { font-size:13px; line-height:1.2; white-space:nowrap; color:#eef1f5; }
+.tq-equip code { font:12px Consolas,monospace; color:#dfe4ea; white-space:nowrap; letter-spacing:-.02em; }
+.tq-equip small { font:11px Consolas,monospace; color:#8f99a7; white-space:nowrap; }
+.tq-equip em { margin-top:2px; padding:1px 6px; border-radius:99px; font-style:normal; font-size:10px; font-weight:800; letter-spacing:.04em;
+  text-transform:uppercase; white-space:nowrap; }
+.tq-equip.voce .tq-icone { border-color:#4c9dff; background:#0f1d2e; color:#9cc9ff; box-shadow:0 0 0 4px rgba(76,157,255,.15); }
+.tq-equip.voce em { color:#0b1220; background:#7cc4ff; }
+.tq-equip.remoto .tq-icone { border-color:#ffb020; background:#2a200c; color:#ffd27a; box-shadow:0 0 0 4px rgba(255,176,32,.18); }
+.tq-equip.remoto em { color:#1e1606; background:#ffc457; }
+.tq-equip.gw-errado .tq-icone { border-color:#ff4f6d; }
+.tq-equip.gw-errado small { color:#ff8a9d; font-weight:700; }
+/* Roteador entre os prédios: cabo para cima (eth0, Prédio A) e para baixo (eth1, Prédio B), com a porta ao lado do cabo. */
+.tq-roteador { position:relative; display:flex; flex-direction:column; align-items:center; gap:2px; padding:26px 0; }
+.tq-roteador::before, .tq-roteador::after { content:''; position:absolute; left:calc(50% - 1px); width:2px; height:26px; background:var(--cabo); }
+.tq-roteador::before { top:0; }
+.tq-roteador::after { bottom:0; }
+.tq-icone-roteador { display:grid; place-items:center; width:50px; height:50px; border:2px solid #ff4f6d; border-radius:12px; background:#1d1216; }
+.tq-icone-roteador svg { width:28px; height:28px; color:#ffc1cb; }
+.tq-roteador strong { position:absolute; top:50%; right:calc(50% + 36px); transform:translateY(-50%); font-size:14px; color:#eef1f5; }
+.tq-porta { position:absolute; left:calc(50% + 10px); font:12px Consolas,monospace; color:#d7dbe2; white-space:nowrap; }
+.tq-porta b { color:#ff8a9d; font-weight:600; }
+.tq-roteador .tq-porta:first-child { top:5px; }
+.tq-roteador .tq-porta:last-child { bottom:5px; }
+
+/* Telas altas (monitor): o diagrama cresce em vez de deixar a coluna vazia. */
+@media (min-height:900px) and (min-width:1600px) {
+  .tq-diagrama { --lado:34px; }
+  .tq-predio { --pad:16px; padding:var(--pad) 10px; }
+  .tq-predio-nome strong { font-size:16px; }
+  .tq-predio-nome code { font-size:13px; }
+  .tq-switch { padding:7px 16px; font-size:14px; }
+  .tq-icone { width:64px; height:64px; }
+  .tq-icone svg { width:32px; height:32px; }
+  .tq-equip strong { font-size:15px; }
+  .tq-equip code { font-size:14px; }
+  .tq-equip small { font-size:12.5px; }
+  .tq-equip em { font-size:11px; }
+  .tq-roteador { padding:58px 0; }
+  .tq-roteador::before, .tq-roteador::after { height:58px; }
+  .tq-roteador .tq-porta:first-child { top:20px; }
+  .tq-roteador .tq-porta:last-child { bottom:20px; }
+  .tq-icone-roteador { width:70px; height:70px; }
+  .tq-icone-roteador svg { width:38px; height:38px; }
+  .tq-roteador strong { right:calc(50% + 46px); font-size:16px; }
+  .tq-porta { font-size:13.5px; }
+}
+/* Lab 7: o plano espera o diagnóstico, e o chamado lista as suspeitas a testar (validação de 17/11/2026). */
+.lr-plano-trancado { opacity:.75; }
+.lr-plano-trancado p { margin:6px 0 0; font-size:13.5px; color:#8b95a5; }
+.lt-suspeitas { list-style:none; margin:0 0 12px; padding:0; display:grid; gap:6px; }
+.lt-suspeitas li { display:flex; align-items:flex-start; gap:10px; padding:8px 10px; border:1px solid #2c3440; border-radius:8px; background:#11151b; }
+.lt-suspeitas li>span { display:grid; place-items:center; width:20px; height:20px; flex-shrink:0; border:1.5px solid #4a5464; border-radius:50%;
+  font-size:11.5px; font-weight:700; color:#c4ccd8; }
+.lt-suspeitas li>svg { flex-shrink:0; margin:2px; color:#3ddc84; }
+.lt-suspeitas li div { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.lt-suspeitas li b { font-size:13.5px; color:#e3e7ec; }
+.lt-suspeitas li small { font-size:12.5px; color:#9fb2c4; line-height:1.4; }
+.lt-suspeitas li code { font:12.5px Consolas,monospace; color:#f4f6f8; }
+.lt-suspeitas li em { margin-left:auto; flex-shrink:0; font-style:normal; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:#8b95a5; }
+.lt-suspeitas li.feito { border-color:#24553a; }
+.lt-suspeitas li.feito em { color:#3ddc84; }
+/* Labs 9 e 10: quem abriu o chamado, no mesmo formato do objetivo. */
+.lt-aberto { display:flex; gap:8px; margin:0 0 8px; font-size:14px; color:#e6ebf2; }
+.lt-aberto b { color:#ff8a9d; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding-top:2px; }

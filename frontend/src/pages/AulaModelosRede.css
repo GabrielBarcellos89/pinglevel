@@ -1,0 +1,129 @@
+.aula-modelos-pagina .modelos-resumo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+.aula-modelos-pagina .modelos-resumo article { padding: 18px; border: 1px solid var(--borda); border-radius: 12px; background: #15191f; }
+.modelos-resumo svg { color: var(--vermelho); }
+.modelos-resumo h2 { margin: 8px 0; font-size: 19px; }
+.modelos-resumo p, .modelos-camadas p { margin: 0; color: var(--texto-suave); font-size: 15px; line-height: 1.6; }
+.modelos-subtitulo { margin: 28px 0 12px; font-size: 18px; }
+.modelos-camadas { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+.modelos-camadas li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: center; padding: 9px 12px; border: 1px solid var(--borda); border-radius: 9px; background: #12161b; }
+.modelos-camadas li > b { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--aula-vermelho-suave); color: var(--vermelho); }
+.modelos-camadas strong { display: block; margin-bottom: 3px; font-size: 15px; }
+.modelos-camadas p { font-size: 14px; }
+.aula-modelos-pagina .aula-bloco { max-width: 900px; }
+.aula-modelos-pagina .modelos-opcoes { display: grid; gap: 9px; margin: 20px 0; }
+.modelos-opcoes label { display: flex; align-items: center; gap: 11px; padding: 13px 15px; border: 1px solid var(--borda); border-radius: 9px; background: #15191f; color: var(--texto-suave); cursor: pointer; }
+.modelos-opcoes label.selecionada { border-color: var(--vermelho); color: var(--texto); background: var(--aula-vermelho-suave); }
+.modelos-opcoes input { accent-color: var(--vermelho); }
+.modelos-exercicios { display: grid; gap: 10px; margin: 18px 0; }
+.modelos-exercicios label { display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, .7fr); align-items: center; gap: 16px; padding: 12px; border: 1px solid var(--borda); border-radius: 9px; background: #15191f; }
+.modelos-exercicios strong { font-size: 15px; }
+.modelos-exercicios select { padding: 9px; border: 1px solid var(--borda); border-radius: 7px; background: #0e1116; color: var(--texto); }
+.modelos-validar { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; }
+.modelos-validar:disabled { opacity: .5; cursor: not-allowed; }
+.modelos-trilho { position: relative; display: flex; justify-content: space-between; gap: 8px; margin: 26px 4px 22px; }
+.modelos-trilho-linha { position: absolute; top: 14px; right: 5%; left: 5%; height: 3px; background: #292d35; }
+.modelos-trilho-linha span { display: block; width: var(--percurso-progresso); height: 100%; background: var(--vermelho); transition: width .55s ease; }
+.modelos-trilho-ponto { position: relative; z-index: 1; display: grid; justify-items: center; gap: 7px; width: 20%; color: var(--texto-suave); font-size: 13px; text-align: center; transition: color .25s ease; }
+.modelos-trilho-ponto b { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid #383d47; border-radius: 50%; background: #111419; color: #9aa1ad; transition: .3s ease; }
+.modelos-trilho-ponto.atual { color: var(--texto); }
+.modelos-trilho-ponto.atual b { border-color: var(--vermelho); background: var(--vermelho); color: white; box-shadow: 0 0 18px #ff234855; transform: scale(1.12); }
+.modelos-trilho-ponto.concluido b { border-color: var(--vermelho); color: var(--vermelho); }
+.modelos-encapsulamento { min-height: 208px; padding: 16px; border: 1px solid var(--borda); border-radius: 12px; background: radial-gradient(ellipse at 50% 0, #21141b, #12161b 72%); }
+.modelos-encapsulamento-titulo { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+.modelos-encapsulamento-titulo strong { font-size: 15px; }
+.modelos-encapsulamento-titulo span { color: var(--texto-suave); font-size: 14px; }
+.modelos-pacote { display: grid; gap: 6px; min-height: 114px; align-content: end; }
+.campo-pacote { display: flex; justify-content: space-between; gap: 10px; padding: 9px 12px; border: 1px solid #5a303c; border-radius: 7px; background: #24151c; color: #f4e9ec; animation: pacote-entra .55s ease both; }
+.campo-pacote b { color: #ff5369; font-size: 14px; }
+.campo-pacote span { color: var(--texto-suave); font-size: 14px; text-align: right; }
+.campo-pacote.campo-ip { border-color: #714352; background: #211920; }
+.campo-pacote.campo-tcp { border-color: #58434c; background: #19191f; }
+.campo-pacote.campo-dados { border-color: #3b414b; background: #15191f; }
+.modelos-encapsulamento > p { margin: 12px 0 0; color: var(--texto-suave); font-size: 15px; line-height: 1.55; }
+@keyframes pacote-entra { from { opacity: 0; transform: translateY(-8px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.modelos-nota { padding: 12px; border-left: 3px solid var(--vermelho); background: #17191f; color: var(--texto-suave); font-size: 15px; line-height: 1.6; }
+.modelos-opcoes label:focus-within, .modelos-exercicios select:focus-visible, .modelos-validar:focus-visible { outline: 2px solid var(--vermelho); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .modelos-trilho-linha span, .modelos-trilho-ponto, .modelos-trilho-ponto b, .campo-pacote { animation: none; transition: none; } }
+@media (max-width: 720px) {
+  .modelos-trilho { gap: 2px; }
+  .modelos-trilho-ponto { font-size: 13px; }
+  .modelos-trilho-ponto b { width: 26px; height: 26px; }
+  .modelos-trilho-linha { top: 12px; }
+  .modelos-encapsulamento { padding: 12px; }
+  .campo-pacote { padding: 8px; }
+  .campo-pacote b, .campo-pacote span { font-size: 13px; }
+  .aula-modelos-pagina .modelos-resumo { grid-template-columns: 1fr; }
+  .modelos-exercicios label { grid-template-columns: 1fr; gap: 8px; }
+  .aula-modelos-pagina .aula-cabecalho { grid-template-columns: 1fr; gap: 12px; }
+  .aula-modelos-pagina .aula-tempo { text-align: left; }
+}
+.aula-modelos-pagina .aula-bloco h1 { max-width: 760px; font-size: clamp(1.9rem, 3vw, 2.65rem); line-height: 1.12; }
+.modelos-introducao .aula-destaque { max-width: 720px; font-size: 1rem; line-height: 1.65; }
+.modelos-introducao .modelos-resumo { margin: 17px 0; }
+.modelos-introducao .modelos-resumo article { padding: 14px 16px; }
+.modelos-introducao .modelos-resumo h2 { font-size: 16px; }
+.modelos-introducao .modelos-resumo p { font-size: 15px; }
+.modelos-introducao .modelos-subtitulo { margin: 19px 0 9px; font-size: 17px; }
+.modelos-mapa { overflow: hidden; border: 1px solid var(--borda); border-radius: 10px; background: #12161b; }
+.modelos-mapa-cabecalho, .modelos-mapa-linha { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; align-items: center; padding: 9px 13px; }
+.modelos-mapa-cabecalho { background: #1a1e25; color: var(--texto-suave); font-size: 13px; font-weight: 750; }
+.modelos-mapa-linha + .modelos-mapa-linha { border-top: 1px solid var(--borda); }
+.modelos-mapa-linha strong { font-size: 15px; }
+.modelos-mapa-linha span, .modelos-mapa-linha small { color: var(--texto-suave); font-size: 14px; line-height: 1.4; }
+.modelos-detalhes { margin-top: 12px; border: 1px solid var(--borda); border-radius: 9px; background: #12161b; }
+.modelos-detalhes summary { padding: 11px 13px; color: var(--texto); font-size: 15px; font-weight: 700; cursor: pointer; }
+.modelos-detalhes[open] { padding-bottom: 12px; }
+.modelos-detalhes .modelos-camadas { margin: 0 12px; }
+.modelos-introducao .modelos-nota { margin-top: 12px; padding: 10px 12px; font-size: 14px; }
+.modelos-introducao .modelos-camadas li { padding: 7px 9px; }
+.modelos-introducao .modelos-camadas p { font-size: 13px; }
+.aula-modelos-pagina .link-painel img { max-height: min(455px, 58vh); }
+@media (max-width: 720px) {
+  .modelos-mapa-cabecalho, .modelos-mapa-linha { grid-template-columns: .9fr .9fr 1.2fr; gap: 7px; padding: 9px; }
+  .modelos-mapa-linha strong, .modelos-mapa-linha span, .modelos-mapa-linha small { font-size: 13px; }
+}
+.modelos-explicacao-curta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; margin: 15px 0; }
+.modelos-explicacao-curta p { margin: 0; padding: 10px 12px; border-left: 2px solid #51313a; background: #15191f; color: var(--texto-suave); font-size: 14px; line-height: 1.55; }
+.modelos-explicacao-curta strong { color: var(--texto); }
+.modelos-exercicios + .modelos-validar { margin-top: 6px; }
+.aula-modelos-pagina .aula-conteudo { padding: clamp(22px, 2.5vw, 38px); }
+.aula-modelos-pagina .link-painel { justify-content: center; }
+.aula-modelos-pagina .link-painel img { object-position: center; }
+@media (max-width: 720px) { .modelos-explicacao-curta { grid-template-columns: 1fr; } }
+
+/* Fechamento: resultado por pergunta. */
+.modelos-pergunta { border-radius:10px; transition:border-color .2s; }
+.modelos-pergunta.certa label { border-color:#2f8f5b; }
+.modelos-pergunta.errada label { border-color:#b83a4f; }
+.modelos-retorno { margin:6px 2px 0; font-size: 15px; line-height:1.5; }
+.modelos-pergunta.certa .modelos-retorno b { color:#6fe0a0; }
+.modelos-pergunta.errada .modelos-retorno b { color:#ff4d5e; }
+
+/* Teste final por situações (revisão de 30/10/2026): cartões com botões, como o desafio LAN/WAN da aula 1. */
+.modelos-ver-tabela { margin: 6px 0 16px; }
+.modelos-ver-tabela .osi-tabela-intro { margin-top: 12px; }
+.modelos-teste { display: grid; gap: 12px; margin-bottom: 18px; }
+.modelos-situacao { padding: 16px 18px; border: 1px solid var(--borda); border-radius: 14px; background: #12161c; }
+.modelos-situacao.certa { border-color: rgba(34, 197, 94, .55); }
+.modelos-situacao.errada { border-color: rgba(240, 32, 53, .6); }
+.modelos-situacao > p:first-child { display: flex; gap: 12px; margin: 0 0 12px; color: #e8ebf0; font-size: 1rem; line-height: 1.55; }
+.modelos-situacao > p:first-child span { display: grid; flex-shrink: 0; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: rgba(240, 32, 53, .14); color: #ff5369; font-weight: 800; font-size: .9rem; }
+.teste-opcoes { display: flex; flex-wrap: wrap; gap: 8px; padding-left: 40px; }
+.teste-opcoes button { padding: 9px 14px; border: 1px solid var(--borda); border-radius: 10px; background: #181d24; color: #c7cdd6; font-size: .9375rem; cursor: pointer; }
+.teste-opcoes button:hover { border-color: #4a5260; color: #fff; }
+.teste-opcoes button.selecionada { border-color: var(--vermelho); background: rgba(240, 32, 53, .14); color: #fff; font-weight: 700; }
+.modelos-situacao .modelos-retorno { margin: 12px 0 0; padding-left: 40px; color: #c7cdd6; font-size: .9375rem; }
+.modelos-situacao.certa .modelos-retorno b { color: #4ade80; }
+.modelos-situacao.errada .modelos-retorno b { color: #ff5369; }
+@media (max-width: 720px) { .teste-opcoes, .modelos-situacao .modelos-retorno { padding-left: 0; } }
+
+/* TCP ou UDP? (30/10/2026) */
+.transporte-comparacao { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 18px 0 22px; }
+.transporte-comparacao article { padding: 18px; border: 1px solid var(--borda); border-radius: 14px; background: #12161c; }
+.transporte-comparacao article > span { display: inline-block; padding: 3px 10px; border-radius: 8px; background: rgba(240, 32, 53, .14); color: #ff5369; font-weight: 800; letter-spacing: .06em; }
+.transporte-comparacao h2 { margin: 10px 0 6px; font-size: 1.15rem; }
+.transporte-comparacao p { margin: 0 0 10px; color: #c7cdd6; font-size: 1rem; line-height: 1.6; }
+.transporte-comparacao small { color: var(--texto-suave); font-size: .9rem; line-height: 1.5; }
+.aula-bloco .transporte-subtitulo { margin: 0 0 12px; font-size: 1.15rem; }
+.transporte-explicacao { display: block; margin-top: 6px; color: #c7cdd6; font-size: .875rem; line-height: 1.5; }
+@media (max-width: 720px) { .transporte-comparacao { grid-template-columns: 1fr; } }

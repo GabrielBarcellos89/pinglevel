@@ -1,0 +1,338 @@
+/* Lab3 somente. Identidade, layout e componentes dos Labs1/2 permanecem intactos. */
+.gateway-lab.gw-v2 { --gw-red:#ff173b; --gw-border:#29313c; --gw-muted:#a9b2bf; color:#f1f2f5; display:flex; flex-direction:column; gap:12px; padding:20px 24px; min-width:0; max-width:1800px; margin:0 auto; width:100%; height:auto; overflow:visible; container-type:inline-size; container-name:gateway; }
+.gw-v2 *, .gw-v2 *::before, .gw-v2 *::after { box-sizing:border-box; }
+.gw-v2 button,.gw-v2 input,.gw-v2 select { font:inherit; font-size:13px; }
+.gw-v2 button { min-height:36px; border:1px solid #343e4b; background:#171c23; color:#e9ecf1; border-radius:8px; padding:8px 12px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:7px; }
+.gw-v2 button:disabled { color:#9ba4b1; background:#232832; border-color:#303741; cursor:not-allowed; }
+.gw-v2 button:focus-visible,.gw-v2 input:focus-visible,.gw-v2 select:focus-visible,.gw-v2 a:focus-visible { outline:2px solid #ff4061; outline-offset:3px; }
+.gw-v2 .gw-primario { background:var(--gw-red); border-color:var(--gw-red); color:#fff; font-weight:700; }
+.gw-v2 .gw-primario:disabled { color:#9ba4b1; background:#232832; border-color:#303741; }
+.gw-v2 h1,.gw-v2 h2,.gw-v2 h3,.gw-v2 p { margin:0; }
+.gw-v2 h1 { font-size:clamp(20px,2vw,28px); line-height:1.2; margin:6px 0; }
+.gw-v2 h2 { font-size:17px; }
+.gw-v2 h3 { font-size:14px; }
+.gw-v2 p { font-size:13px; line-height:1.55; color:#bbc3cf; }
+.gw-v2 .gw-etiqueta { color:#ff3656; font-size:12px; font-weight:800; letter-spacing:1.5px; }
+.gw-v2 .gw-nota { color:var(--gw-muted); font-size:12px; line-height:1.5; }
+.gw-controles,.gw-acoes { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.gw-controles a { margin-left:auto; font-size:12px; color:#b8c0cd; }
+.gw-cabecalho { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px; border:1px solid #3c2730; border-radius:14px; background:linear-gradient(110deg,#281117,#101419 50%); }
+.gw-tempo { display:flex; align-items:center; gap:8px; padding-right:10px; color:#28dc91; }
+.gw-tempo span { display:flex; flex-direction:column; }
+.gw-tempo strong { font-size:22px; color:#f2f3f6; font-variant-numeric:tabular-nums; }
+.gw-tempo small { font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+.gw-faixa-status { padding:7px 12px; border:1px solid #1e603e; background:#0d251b; border-radius:8px; color:#81e8b0!important; }
+.gw-alerta,.gw-sucesso { padding:12px 16px; border:1px solid #6e3543; border-radius:9px; background:#23141a; font-size:13px; overflow-wrap:anywhere; }
+.gw-alerta p,.gw-sucesso p { margin:5px 0; }
+.gw-sucesso { border-color:#1e603e; background:#0d251b; }
+.gw-etapas { list-style:none; padding:12px 15px; margin:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border:1px solid var(--gw-border); border-radius:12px; background:#0e1319; gap:15px; }
+.gw-etapas li { display:flex; align-items:center; gap:10px; min-width:0; color:#a5aebc; }
+.gw-etapas li>span { flex:0 0 32px; height:32px; border:1px solid #4b5668; display:grid; place-items:center; border-radius:50%; font-size:14px; }
+.gw-etapas strong { font-size:12px; display:block; }
+.gw-etapas small { font-size:12px; display:block; margin-top:3px; line-height:1.4; }
+.gw-etapas .atual>span { background:#451522; border-color:var(--gw-red); color:#fff; }
+.gw-etapas .atual strong { color:#fff; }
+.gw-etapas .feita>span { border-color:#23d884; color:#23d884; }
+.gw-painel { background:#101419; border:1px solid var(--gw-border); border-radius:12px; min-width:0; }
+.gw-topologia { padding:14px; }
+.gw-v2 .gw-topologia h2 { font-size:12px; color:#bcc7d5; }
+.gw-mapa { position:relative; height:210px; margin-top:10px; }
+.gw-zona-local,.gw-zona-remota { position:absolute; top:0; bottom:0; border:1px dashed #73303e; border-radius:10px; background:#52152312; }
+.gw-zona-local { left:0; width:50%; }
+.gw-zona-remota { left:80%; right:0; }
+.gw-zona-local>span,.gw-zona-remota>span { position:absolute; top:9px; left:12px; font-size:12px; color:#ff3656; font-weight:650; }
+.gw-cabos { position:absolute; top:30px; left:0; width:100%; height:180px; pointer-events:none; }
+.gw-cabos-mobile { display:none; }
+.gw-cabos path,.gw-cabos-mobile path { fill:none; stroke:#ff173b; stroke-width:2; vector-effect:non-scaling-stroke; }
+.gw-v2 .gw-equipamento { position:absolute; width:16%; height:65px; flex-direction:column; gap:3px; padding:5px; background:#161c23; z-index:1; }
+.gw-equipamento svg { width:22px; height:22px; color:#c5ccd6; }
+.gw-equipamento strong { font-size:12px; }
+.gw-equipamento small { font-size:12px; color:#bbc3cf; }
+.gw-v2 .gw-equipamento[aria-pressed=true] { border-color:var(--gw-red); background:#32131c; box-shadow:0 0 0 2px #ff173b18; }
+.gw-equipamento[aria-pressed=true] svg { color:var(--gw-red); }
+.gw-no-1 { top:45px; left:2%; }
+.gw-no-2 { top:125px; left:2%; }
+.gw-no-3 { top:85px; left:30%; }
+.gw-no-5 { top:85px; left:56%; }
+.gw-no-4 { top:85px; left:82%; }
+.gw-inspecao { border-top:1px solid var(--gw-border); padding-top:10px; margin-top:10px; display:flex; align-items:center; gap:15px; flex-wrap:wrap; font-size:12px; color:#bfc8d5; }
+.gw-colunas { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:12px; align-items:start; }
+.gw-sem-bastidores { grid-template-columns:1fr; }
+.gw-pratica { padding:14px; }
+.gw-pratica>header { display:flex; gap:10px; align-items:center; padding-bottom:12px; border-bottom:1px solid var(--gw-border); }
+.gw-pratica>header svg { color:var(--gw-red); }
+.gw-abas { display:flex; gap:4px; margin:12px 0; padding:3px; background:#090d12; border:1px solid var(--gw-border); border-radius:9px; width:fit-content; }
+.gw-v2 .gw-abas button { background:transparent; border-color:transparent; }
+.gw-v2 .gw-abas button[aria-selected=true] { background:#3b1520; border-color:var(--gw-red); }
+.gw-atividade { padding:14px; display:flex; flex-direction:column; align-items:flex-start; gap:10px; background:#151920; border:1px solid #35303c; border-radius:10px; margin:10px 0 14px; }
+.gw-v2 label { font-size:12px; color:#d5dbe4; display:block; }
+.gw-v2 input,.gw-v2 select { min-width:0; width:100%; min-height:40px; color:#f2f4f7; background:#0b0f14; padding:9px 10px; border:1px solid #394453; border-radius:7px; }
+.gw-v2 select { text-overflow:ellipsis; }
+.gw-v2 input:read-only { background:#181e26; color:#a6b1c1; }
+.gw-enderecos { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:14px 0; }
+.gw-enderecos label { position:relative; }
+.gw-enderecos label>svg { float:right; color:#a6b1c1; }
+.gw-enderecos input { margin-top:7px; }
+.gw-form>div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; margin:7px 0; }
+.gw-form input { border-color:#b72b45; }
+.gw-testes { border-top:1px solid var(--gw-border); padding-top:14px; margin-top:14px; }
+.gw-testes>p { margin-top:5px; }
+.gw-teste { display:grid; grid-template-columns:22px minmax(80px,1fr) auto auto; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid #252c36; font-size:12px; }
+.gw-teste span strong,.gw-teste span small { display:block; }
+.gw-teste span small { margin-top:4px; color:#aab5c4; font-size:12px; }
+.gw-teste b { font-size:12px; color:#aeb7c5; font-weight:500; }
+.gw-teste b::before { content:'●'; margin-right:5px; }
+.gw-teste .ok { color:#35e596; }
+.gw-teste .falhou { color:#ffc782; }
+.gw-bastidores { padding:16px; position:relative; }
+.gw-bastidores>h2 { margin:9px 0; }
+.gw-ilustracao { display:inline-block; padding:4px 8px; border:1px solid #34404f; border-radius:6px; font-size:12px; color:#bac5d5; margin-bottom:10px; }
+.gw-conceito { display:flex; align-items:flex-start; gap:12px; padding:15px 0; border-bottom:1px solid var(--gw-border); }
+.gw-conceito>svg { flex:0 0 24px; color:#b9c6d7; }
+.gw-conceito h3 { display:flex; align-items:center; flex-wrap:wrap; gap:6px; font-size:13px; }
+.gw-conceito p { margin-top:7px; }
+.gw-bastidores>.gw-nota { margin-top:10px; }
+.gw-link { display:flex; align-items:center; gap:14px; padding:14px; background:linear-gradient(110deg,#24151c,#15151b); border:1px solid #623040; border-radius:10px; margin-top:15px; }
+.gw-link img { width:68px; height:115px; object-fit:contain; }
+.gw-link p { margin:7px 0 10px; }
+.gw-v2 .gw-link button { background:#3d1420; border-color:#bd2b46; }
+.gw-preparado { display:flex; align-items:center; gap:7px; margin-top:12px!important; font-size:12px!important; }
+.gw-preparado svg { flex-shrink:0; }
+.gw-terminal p { margin:9px 0; }
+.gw-terminal pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#070b0f; padding:12px; font:12px/1.6 Consolas,monospace; color:#b9d0c7; border:1px solid #26313b; border-radius:7px; }
+.gw-gerencia { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.gw-gerencia p { flex:1 1 200px; font-size:12px; }
+.gw-foco { max-width:none!important; }
+@media (max-width:1050px) { .gateway-lab.gw-v2 { padding:16px; } .gw-colunas { grid-template-columns:1fr; } .gw-etapas small { display:none; } .gw-cabecalho { flex-wrap:wrap; } .gw-zona-local>span,.gw-zona-remota>span { font-size:12px; left:7px; } }
+@container gateway (max-width:650px) { .gateway-lab.gw-v2 { padding:10px; gap:10px; } .gw-etapas { grid-template-columns:1fr 1fr; gap:14px; } .gw-mapa { height:360px; } .gw-v2 .gw-equipamento { width:40%; height:65px; } .gw-no-1 { left:3%; top:40px; } .gw-no-2 { left:55%; top:40px; } .gw-no-3 { left:29%; top:140px; } .gw-no-5 { left:3%; top:260px; } .gw-no-4 { left:55%; top:260px; } .gw-zona-local { width:100%; height:225px; bottom:auto; } .gw-zona-remota { left:52%; width:48%; top:235px; } .gw-cabos { display:none; } .gw-cabos-mobile { display:block; position:absolute; width:100%; height:360px; top:0; left:0; pointer-events:none; } .gw-teste { grid-template-columns:20px minmax(80px,1fr) auto; gap:7px; } .gw-teste button { grid-column:3; } .gw-teste b { grid-column:2; grid-row:auto; } .gw-enderecos { grid-template-columns:1fr; gap:9px; } .gw-form>div { grid-template-columns:1fr; } .gw-link { padding:10px; gap:8px; } .gw-link img { width:53px; } .gw-cabecalho { padding:15px; } .gw-abas { width:100%; } .gw-abas button { flex:1; padding:7px; font-size:12px; } }
+
+.aplicacao:has(.gateway-lab.gw-foco) { padding-left:0; }
+.aplicacao:has(.gateway-lab.gw-foco)>.sidebar,.aplicacao:has(.gateway-lab.gw-foco)>.conteudo>.topbar { display:none; }
+@media (max-width:480px) {
+  .aplicacao:has(.gateway-lab.gw-v2) .topbar { padding:10px 12px; gap:8px; }
+  .aplicacao:has(.gateway-lab.gw-v2) .topbar-acoes { gap:6px; }
+  .aplicacao:has(.gateway-lab.gw-v2) .usuario-identidade { display:none; }
+}
+@media (max-width:480px) {
+  .aplicacao:has(.gateway-lab.gw-v2) .topbar .ajuda { display:none; }
+}
+
+/* Refinamento: foco inicial e informações reveladas conforme a prática. */
+.gw-ajuda-link img { width:22px; height:24px; object-fit:contain; }
+.gw-v2 .gw-link-independente { margin:0; max-width:760px; }
+.gw-link-independente button + button { margin-left:8px; }
+.gw-inspecao-pc { display:block; }
+.gw-inspecao-pc .gw-enderecos { max-width:600px; margin-bottom:0; }
+.gw-etapa-atual { margin-left:auto; color:#aab4c4; font-size:12px; }
+.gw-v2 .gw-form { margin:16px 0; }
+.gw-v2 .gw-form .gw-contexto { margin-bottom:12px; }
+.gw-v2 .gw-terminal { margin-top:14px; padding:16px; background:#090d12; border:1px solid #303c4c; border-radius:10px; }
+.gw-terminal>header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.gw-terminal>p code { color:#e8eef5; padding:2px 4px; background:#1b222c; border-radius:4px; }
+.gw-linha-comando { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 0 0; font-size:12px; }
+.gw-linha-comando code { overflow-wrap:anywhere; }
+.gw-linha-comando .ok { color:#35e596; }
+.gw-linha-comando .falhou { color:#ffc782; }
+.gw-terminal .gw-saida-comando pre { margin:8px 0 10px; }
+.gw-entrada-terminal { margin-top:12px; }
+.gw-entrada-terminal>div { display:flex; gap:8px; align-items:center; margin:7px 0; }
+.gw-prompt { color:#76dda7; font:16px Consolas,monospace; flex-shrink:0; }
+.gw-v2 .gw-entrada-terminal input { font-family:Consolas,monospace; flex:1; }
+.gw-entrada-terminal button { flex-shrink:0; }
+.gw-entrada-terminal [role=alert]:not(:empty) { margin-top:8px; color:#ffc782; }
+.gw-historico,.gw-detalhes-execucao { margin-top:12px; padding-top:10px; border-top:1px solid #27313d; }
+.gw-terminal summary { cursor:pointer; color:#b8c4d4; font-size:12px; }
+.gw-v2 .gw-abrir-terminal { margin-top:12px; }
+.gw-v2 .gw-testes .gw-teste { grid-template-columns:22px minmax(80px,1fr) auto; }
+@container gateway (max-width:650px) {
+  .gw-v2 .gw-terminal { padding:12px; }
+  .gw-entrada-terminal>div { display:grid; grid-template-columns:12px minmax(0,1fr); }
+  .gw-entrada-terminal button { grid-column:2; justify-self:start; }
+  .gw-etapa-atual { display:none; }
+  .gw-v2 .gw-testes .gw-teste b { grid-column:3; grid-row:1; }
+}
+
+/* Área de trabalho: somente a prática rola; rede e tutor permanecem disponíveis. */
+.gateway-lab.gw-v3 { height:calc(100dvh - 78px); max-height:calc(100dvh - 78px); overflow:hidden; gap:8px; padding:10px 16px; }
+.gateway-lab.gw-v3.gw-foco { height:100dvh; max-height:100dvh; }
+.gw-v3>.gw-controles,.gw-v3>.gw-cabecalho,.gw-v3>.gw-alerta,.gw-v3>.gw-sucesso,.gw-v3>.gw-gerencia { flex-shrink:0; }
+.gw-v3 .gw-controles button { min-height:32px; padding:6px 10px; font-size:12px; }
+.gw-v3 .gw-cabecalho { padding:10px 14px; border-radius:10px; }
+.gw-v3 .gw-cabecalho h1 { font-size:21px; margin:3px 0; }
+.gw-v3 .gw-cabecalho p { font-size:12px; }
+.gw-v3 .gw-topologia { padding:8px 10px; }
+.gw-v3 .gw-mapa { height:145px; margin-top:5px; }
+.gw-v3 .gw-equipamento { height:49px; gap:1px; }
+.gw-v3 .gw-equipamento svg { width:17px; height:17px; }
+.gw-v3 .gw-equipamento strong { font-size:12px; }
+.gw-v3 .gw-no-1 { top:24px; }
+.gw-v3 .gw-no-2 { top:86px; }
+.gw-v3 .gw-no-3,.gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:55px; }
+.gw-v3 .gw-cabos { top:11px; height:140px; }
+.gw-v3 .gw-etapas { padding:7px 12px; flex-shrink:0; gap:10px; }
+.gw-v3 .gw-etapas li>span { height:26px; flex-basis:26px; }
+.gw-v3 .gw-etapas small { display:none; }
+.gw-v3 .gw-colunas { display:flex; flex-direction:column; }
+.gw-v3 .gw-colunas>section,.gw-v3 .gw-colunas>aside { width:100%; }
+.gw-v3 .gw-pratica { padding:12px; }
+.gw-v3 .gw-pratica>header { padding-bottom:7px; }
+.gw-v3 .gw-pratica>header h2 { font-size:15px; }
+.gw-v3 .gw-atividade { padding:12px; gap:8px; margin:10px 0; }
+.gw-v3 .gw-testes { padding-top:9px; margin-top:9px; }
+.gw-v3 .gw-teste { padding:9px 0; }
+.gw-v3 .gw-inspecao { padding-top:6px; margin-top:6px; }
+.gw-v3 .gw-inspecao-pc { display:flex; }
+.gw-v3 .gw-inspecao-pc .gw-enderecos { display:flex; margin:0; gap:10px; }
+.gw-v3 .gw-inspecao-pc input { min-height:30px; padding:5px; }
+.gw-v3 .gw-proxima-acao { outline:2px solid #ff3656; outline-offset:3px; box-shadow:0 0 0 5px #ff173b18; }
+.gw-v3 .gw-opcional { width:100%; color:#aeb8c8; font-size:12px; border-top:1px solid #303641; padding-top:8px; }
+.gw-v3 .gw-opcional summary { cursor:pointer; }
+.gw-v3 .gw-opcional button { margin-top:8px; }
+.gw-v3 .gw-resumo-ping { font-family:Consolas,monospace; font-size:12px; color:#bfd4ca; overflow-wrap:anywhere; }
+.gw-v3 .gw-saida-completa summary { color:#aeb8c8; font-size:12px; cursor:pointer; }
+.gw-v3 .gw-gerencia { font-size:12px; color:#aeb8c8; }
+.gw-v3 .gw-gerencia>details { width:100%; }
+.gw-v3 .gw-gerencia summary { cursor:pointer; padding:5px; text-align:right; }
+.gw-v3 .gw-gerencia-itens { display:flex; flex-wrap:wrap; gap:7px; padding:7px; border:1px solid #303641; border-radius:8px; }
+@media (max-height:720px) and (min-width:851px) {
+ .gw-v3 .gw-cabecalho p,.gw-v3 .gw-cabecalho .gw-etiqueta { display:none; }
+ .gw-v3 .gw-cabecalho { padding:7px 12px; }
+ .gw-v3 .gw-mapa { height:115px; }
+ .gw-v3 .gw-no-1 { top:20px; }
+ .gw-v3 .gw-no-2 { top:73px; }
+ .gw-v3 .gw-no-3,.gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:42px; }
+ .gw-v3 .gw-equipamento { height:40px; }
+ .gw-v3 .gw-equipamento svg { display:none; }
+ .gw-v3 .gw-cabos { height:113px; top:6px; }
+}
+@media (max-width:850px) {
+ .gateway-lab.gw-v3 { padding:8px; gap:6px; }
+ .gw-v3 .gw-controles { gap:5px; }
+ .gw-v3 .gw-controles button,.gw-v3 .gw-controles a { font-size:12px; }
+ .gw-v3 .gw-cabecalho { padding:8px 10px; gap:7px; }
+ .gw-v3 .gw-cabecalho h1 { font-size:17px; }
+ .gw-v3 .gw-cabecalho p { display:none; }
+ .gw-v3 .gw-cabecalho .gw-etiqueta { font-size:12px; }
+ .gw-v3 .gw-cabecalho>div:first-child { flex:1 1 180px; }
+ .gw-v3 .gw-tempo strong { font-size:17px; }
+ .gw-v3 .gw-etapas { grid-template-columns:repeat(4,minmax(0,1fr)); padding:6px; gap:3px; }
+ .gw-v3 .gw-etapas li { flex-direction:column; gap:3px; text-align:center; }
+ .gw-v3 .gw-etapas strong { font-size:12px; }
+ .gw-v3 .gw-etapas li>span { width:20px; height:20px; flex-basis:20px; font-size:12px; }
+ .gw-v3 .gw-inspecao-pc .gw-enderecos { flex-wrap:wrap; }
+ .gw-v3 .gw-alerta { font-size:12px; padding:7px; }
+}
+@container gateway (max-width:650px) {
+ .gw-v3 .gw-mapa { height:360px; }
+ .gw-v3 .gw-equipamento { height:65px; }
+ .gw-v3 .gw-no-1,.gw-v3 .gw-no-2 { top:40px; }
+ .gw-v3 .gw-no-3 { top:140px; }
+ .gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:260px; }
+}
+/* Legibilidade: o endereço é informação principal da topologia. */
+.gw-v3 .gw-cabecalho p { display:none; }
+.gw-v3 .gw-mapa { height:220px; }
+.gw-v3 .gw-equipamento { height:78px; gap:2px; padding:7px; }
+.gw-v3 .gw-equipamento svg { display:block; width:28px; height:28px; flex-shrink:0; }
+.gw-v3 .gw-equipamento strong { font-size:14px; line-height:1.2; }
+.gw-v3 .gw-equipamento small { font:600 16px/1.3 Consolas,monospace; color:#ecf0f7; }
+.gw-v3 .gw-no-1 { top:28px; }
+.gw-v3 .gw-no-2 { top:126px; }
+.gw-v3 .gw-no-3,.gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:76px; }
+.gw-v3 .gw-cabos { top:0; height:220px; }
+.gw-v3 .gw-zona-local>span,.gw-v3 .gw-zona-remota>span { font-size:13px; }
+.gw-v3 .gw-inspecao { font-size:14px; }
+@container gateway (max-width:650px) {
+ .gw-v3 .gw-mapa { height:430px; }
+ .gw-v3 .gw-equipamento { height:86px; }
+ .gw-v3 .gw-no-1,.gw-v3 .gw-no-2 { top:40px; }
+ .gw-v3 .gw-no-3 { top:175px; }
+ .gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:300px; }
+ .gw-v3 .gw-zona-local { height:270px; }
+ .gw-v3 .gw-zona-remota { top:285px; }
+ .gw-v3 .gw-cabos-mobile { height:430px; }
+ .gw-v3 .gw-equipamento small { font-size:14px; }
+}
+.gw-v3 .gw-equipamento { height:84px; padding:5px; }
+.gw-v3 .gw-endereco-no { display:flex; justify-content:center; flex-wrap:wrap; max-width:100%; }
+.gw-v3 .gw-endereco-no>span { white-space:nowrap; }
+@media (min-width:851px) and (max-width:1150px) { .gw-v3 .gw-equipamento small { font-size:14px; } }
+@container gateway (max-width:650px) {
+ .gw-v3 .gw-mapa { height:480px; }
+ .gw-v3 .gw-equipamento { height:104px; padding:4px; }
+ .gw-v3 .gw-no-3 { top:200px; }
+ .gw-v3 .gw-no-5,.gw-v3 .gw-no-4 { top:330px; }
+ .gw-v3 .gw-zona-local { height:315px; }
+ .gw-v3 .gw-zona-remota { top:320px; }
+ .gw-v3 .gw-cabos-mobile { height:480px; }
+ .gw-v3 .gw-prefixo-no { font-size:12px; }
+}
+.gw-v3 .gw-equipamento small:not(.gw-endereco-no) { font-family:inherit; font-size:14px; font-weight:400; }
+/* Interfaces do roteador presas ao próprio nó: acompanham sua posição em qualquer tamanho de tela. */
+.gw-v3 .gw-porta { position:absolute; bottom:calc(50% + 5px); display:flex; flex-direction:column; gap:1px; font:600 13px/1.25 Consolas,monospace; color:#ecf0f7; white-space:nowrap; pointer-events:none; }
+.gw-v3 .gw-porta b { font-size:12px; font-weight:650; color:#ff3656; }
+.gw-v3 .gw-porta-eth0 { right:calc(100% + 8px); align-items:flex-end; }
+.gw-v3 .gw-porta-eth1 { left:calc(100% + 8px); align-items:flex-start; }
+@media (min-width:851px) and (max-width:1150px) { .gw-v3 .gw-porta { font-size:12px; } }
+@container gateway (max-width:650px) {
+ .gw-v3 .gw-porta { bottom:auto; top:calc(100% + 4px); left:0; right:auto; flex-direction:row; align-items:baseline; gap:6px; font-size:12px; }
+ .gw-v3 .gw-porta-eth1 { top:calc(100% + 21px); }
+}
+
+/* Três colunas (como o Lab 2): mapa de cima para baixo à esquerda, terminal no centro, tarefas e Link à direita. */
+.gw-v3 .pl-tres .gw-mapa { position:relative; height:auto; display:grid; grid-template-columns:1fr 1fr; row-gap:18px; margin-top:6px; }
+.gw-v3 .pl-tres .gw-cabos, .gw-v3 .pl-tres .gw-cabos-mobile { display:none; }
+.gw-v3 .pl-tres .gw-zona-local, .gw-v3 .pl-tres .gw-zona-remota { position:relative; inset:auto; width:auto; height:auto; grid-column:1 / -1; }
+.gw-v3 .pl-tres .gw-zona-local { grid-row:1 / 3; }
+.gw-v3 .pl-tres .gw-zona-remota { grid-row:4; }
+.gw-v3 .pl-tres .gw-zona-local>span, .gw-v3 .pl-tres .gw-zona-remota>span { top:7px; left:10px; font-size:13px; }
+.gw-v3 .pl-tres .gw-equipamento { position:relative; inset:auto; width:auto; height:auto; min-height:0; padding:7px 6px; gap:2px; }
+.gw-v3 .pl-tres .gw-equipamento svg { display:block; width:20px; height:20px; }
+.gw-v3 .pl-tres .gw-equipamento strong { font-size:13px; }
+.gw-v3 .pl-tres .gw-equipamento small { font-size:14px; }
+.gw-v3 .pl-tres .gw-no-1 { grid-area:1 / 1; margin:32px 6px 0 10px; }
+.gw-v3 .pl-tres .gw-no-2 { grid-area:1 / 2; margin:32px 10px 0 6px; }
+.gw-v3 .pl-tres .gw-no-3 { grid-area:2 / 1 / 3 / -1; justify-self:center; width:50%; margin-bottom:10px; }
+.gw-v3 .pl-tres .gw-no-5 { grid-area:3 / 1 / 4 / -1; justify-self:center; width:62%; margin-top:10px; }
+.gw-v3 .pl-tres .gw-no-4 { grid-area:4 / 1 / 5 / -1; justify-self:center; width:50%; margin:32px 0 10px; }
+/* Cabos: dos PCs ao switch por um barramento; do switch ao roteador; do roteador ao servidor. */
+.gw-v3 .pl-tres .gw-no-1::after, .gw-v3 .pl-tres .gw-no-2::after { content:''; position:absolute; top:100%; left:50%; width:2px; height:9px; background:#ff173b; }
+.gw-v3 .pl-tres .gw-no-3::before { content:''; position:absolute; left:0; right:0; bottom:calc(100% + 9px); height:2px; background:#ff173b; }
+.gw-v3 .pl-tres .gw-no-3::after, .gw-v3 .pl-tres .gw-no-5::before, .gw-v3 .pl-tres .gw-no-4::before { content:''; position:absolute; left:50%; bottom:100%;
+  width:2px; height:9px; background:#ff173b; }
+.gw-v3 .pl-tres .gw-no-5::before { height:38px; }
+.gw-v3 .pl-tres .gw-no-4::before { height:50px; }
+.gw-v3 .pl-tres .gw-porta { position:static; flex-direction:row; align-items:baseline; gap:6px; font-size:12px; }
+/* Portas dentro do roteador: depois da consulta, substituem o "Duas interfaces". */
+.gw-v3 .pl-tres .gw-no-5:has(.gw-porta span)>small { display:none; }
+.gw-v3 .pl-tres .gw-inspecao-pc .gw-enderecos { flex-wrap:wrap; }
+.gw-v3 .pl-tres .gw-inspecao { font-size:13px; }
+.gw-v3 .pl-tres .pl-col-terminal { overflow:auto; overscroll-behavior:contain; }
+.gw-v3 .pl-tres .pl-col-terminal>.gw-terminal { flex:1 0 auto; margin-top:0; font-size:15px; }
+.gw-v3 .pl-tres .pl-col-terminal .gw-terminal pre { font-size:14px; }
+.gw-v3 .pl-tres .gw-terminal-espera { display:flex; flex-direction:column; align-items:flex-start; gap:8px; color:#bfc8d5; }
+.gw-v3 .pl-tres .pl-col-terminal>.bt-painel { margin-top:0; }
+.gw-v3 .pl-tres .pl-tarefas { display:flex; flex-direction:column; gap:10px; }
+.gw-v3 .pl-tres .gw-pratica { font-size:15px; }
+.gw-v3 .pl-tres .gw-form>div { grid-template-columns:1fr; }
+/* Em telas baixas (1366×768) o mapa precisa caber: cabeçalho e etapas mais compactos, /24 só no rótulo da rede. */
+.gw-v3:has(.pl-tres) .gw-cabecalho { padding:6px 14px; }
+.gw-v3:has(.pl-tres) .gw-cabecalho h1 { font-size:19px; }
+.gw-v3:has(.pl-tres) .gw-cabecalho p { display:none; }
+.gw-v3 .pl-tres .pl-col-mapa .gw-etapas { grid-template-columns:1fr 1fr!important; }
+.gw-v3 .pl-tres .gw-prefixo-no { display:none; }
+.gw-v3 .pl-tres .gw-topologia h2 { margin:0; }
+@media (max-height:820px) {
+  .gw-v3 .pl-tres .gw-equipamento svg { display:none; }
+  .gw-v3 .pl-tres .gw-no-3>small { display:none; }
+  /* O "Agora faça" já diz "Etapa N de 4" e o Validar mostra o total; a lista sai para o mapa caber. */
+  .gw-v3 .pl-tres .pl-col-mapa>.gw-etapas { display:none; }
+  .gw-v3 .pl-tres .gw-equipamento { padding:5px 6px; }
+  .gw-v3 .pl-tres .gw-mapa { row-gap:14px; }
+  .gw-v3 .pl-tres .gw-no-1, .gw-v3 .pl-tres .gw-no-2 { margin-top:28px; }
+  .gw-v3 .pl-tres .gw-no-4 { margin-top:28px; }
+  .gw-v3 .pl-tres .gw-no-3::before { bottom:calc(100% + 7px); }
+  .gw-v3 .pl-tres .gw-no-1::after, .gw-v3 .pl-tres .gw-no-2::after, .gw-v3 .pl-tres .gw-no-3::after { height:7px; }
+  .gw-v3 .pl-tres .gw-no-5::before { height:34px; }
+  .gw-v3 .pl-tres .gw-no-4::before { height:42px; }
+}

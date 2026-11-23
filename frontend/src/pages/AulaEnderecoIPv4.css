@@ -1,0 +1,61 @@
+.aula-ipv4-pagina .ipv4-introducao h1 { max-width: 720px; font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.12; }
+.ipv4-introducao .aula-destaque { max-width: 720px; font-size: 1rem; line-height: 1.65; }
+.ipv4-exemplo-endereco { display: flex; align-items: center; gap: 14px; margin: 20px 0; padding: 16px; border: 1px solid #54303a; border-radius: 12px; background: linear-gradient(110deg, #25151c, #15191f 75%); }
+.ipv4-exemplo-endereco svg { color: var(--vermelho); }
+.ipv4-exemplo-endereco div { display: grid; gap: 5px; }
+.ipv4-exemplo-endereco strong { font-size: 1.35rem; letter-spacing: .03em; }
+.ipv4-exemplo-endereco span, .ipv4-rede-exemplo span { color: var(--texto-suave); font-size: 13px; }
+.ipv4-conceitos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin: 14px 0; }
+.ipv4-conceitos article { padding: 13px; border: 1px solid var(--borda); border-radius: 10px; background: #15191f; }
+.ipv4-conceitos b { color: var(--vermelho); font-size: 13px; }
+.ipv4-conceitos p { margin: 7px 0 0; color: var(--texto-suave); font-size: 15px; line-height: 1.5; }
+.ipv4-rede-exemplo { display: grid; grid-template-columns: 105px 1fr; align-items: center; gap: 7px 12px; padding: 13px; border: 1px solid var(--borda); border-radius: 10px; background: #111419; }
+.ipv4-rede-exemplo strong { font-size: 13px; }
+.ipv4-rede-exemplo i { grid-column: 1 / -1; height: 1px; background: var(--borda); }
+.ipv4-destaque-mascara { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 16px 0; padding: 13px; border: 1px solid var(--borda); border-radius: 10px; background: #14181e; }
+.ipv4-destaque-mascara code { color: #fff; font-size: 15px; }
+.ipv4-destaque-mascara svg { color: var(--vermelho); }
+.ipv4-exercicios { display: grid; gap: 9px; margin: 18px 0; }
+.ipv4-exercicios label { display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, .65fr); align-items: center; gap: 14px; padding: 12px; border: 1px solid var(--borda); border-radius: 9px; background: #15191f; }
+.ipv4-exercicios strong { font-size: 13px; line-height: 1.5; }
+.ipv4-exercicios select { min-width: 0; padding: 9px; border: 1px solid var(--borda); border-radius: 7px; background: #0e1116; color: var(--texto); }
+.ipv4-caminho { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin: 22px 0; }
+.ipv4-caminho article { display: grid; justify-items: start; gap: 8px; min-height: 150px; padding: 15px; border: 1px solid var(--borda); border-radius: 11px; background: #15191f; }
+.ipv4-caminho article svg { color: var(--vermelho); }
+.ipv4-caminho article strong { font-size: 15px; }
+.ipv4-caminho article span, .ipv4-caminho article small { color: var(--texto-suave); font-size: 13px; line-height: 1.5; }
+.ipv4-caminho > div { display: grid; justify-items: center; gap: 6px; color: var(--vermelho); text-align: center; }
+.ipv4-caminho > div small { max-width: 110px; color: var(--texto-suave); font-size: 13px; }
+.ipv4-pacote { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; padding: 13px; border-radius: 9px; background: #111419; }
+.ipv4-pacote span { color: var(--texto-suave); font-size: 13px; }
+.ipv4-pacote strong { font-size: 13px; }
+.ipv4-pacote svg { color: var(--vermelho); }
+@media (max-width: 720px) {
+  .ipv4-conceitos { grid-template-columns: 1fr; }
+  .ipv4-exercicios label { grid-template-columns: 1fr; gap: 8px; }
+  .ipv4-caminho { grid-template-columns: 1fr; }
+  .ipv4-caminho > div svg { transform: rotate(90deg); }
+  .ipv4-destaque-mascara { gap: 8px; }
+  .ipv4-destaque-mascara code { font-size: 13px; }
+  .aula-ipv4-pagina .aula-cabecalho { grid-template-columns: 1fr; gap: 12px; }
+  .aula-ipv4-pagina .aula-tempo { text-align: left; }
+}
+
+.aula-ipv4-pagina .ipv4-estado { margin: 0 0 14px; padding: 12px 16px; border: 1px solid var(--borda); border-radius: 10px; background: #15191f; color: var(--texto-suave); font-size: 13px; line-height: 1.6; }
+.aula-ipv4-pagina .ipv4-estado-erro { border-color: var(--vermelho); }
+.aula-ipv4-pagina .ipv4-estado-erro strong { color: var(--texto); }
+.aula-ipv4-pagina .ipv4-estado p { margin: 6px 0; }
+.ipv4-estado-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ipv4-estado-acoes button { padding: 8px 12px; border: 1px solid var(--borda); border-radius: 7px; background: #0e1116; color: var(--texto); cursor: pointer; }
+.aula-ipv4-pagina button:disabled, .aula-ipv4-pagina input:disabled, .aula-ipv4-pagina select:disabled { cursor: not-allowed; opacity: .6; }
+.ipv4-estado-acoes button:focus-visible { outline: 2px solid var(--vermelho); outline-offset: 3px; }
+
+/* Ponte para o terminal na conclusão da aula. */
+.ipv4-terminal-ponte { text-align:left; margin-top:18px; padding:14px 16px; border:1px solid #303641; border-radius:10px; background:#11161d; }
+.ipv4-terminal-ponte h3 { margin:0 0 6px; font-size:16px; }
+.ipv4-terminal-ponte p, .ipv4-terminal-ponte li { font-size:15px; line-height:1.5; }
+.ipv4-terminal-ponte ul { margin:8px 0 0; padding-left:18px; }
+.ipv4-terminal-exemplo { margin:10px 0; padding:12px 14px; background:#070b0f; border:1px solid #26313b; border-radius:7px;
+  font:13px/1.6 Consolas,monospace; color:#b9d0c7; white-space:pre-wrap; overflow-wrap:anywhere; }
+.ipv4-terminal-exemplo span { color:#ecf0f7; font-weight:600; }
+.ipv4-terminal-exemplo b { color:#ff4d5e; font-weight:600; }

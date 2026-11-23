@@ -1,0 +1,68 @@
+.trilha-pagina { display:flex; flex-direction:column; gap:18px; }
+.trilha-cabecalho { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:flex-end; padding:24px 28px;
+  border:1px solid #3a1f27; border-radius:14px; background:linear-gradient(135deg, #2a1218, #14171c 70%); }
+.trilha-cabecalho h1 { margin:6px 0 8px; font-size:34px; }
+.trilha-cabecalho p { margin:0; max-width:640px; color:#c4ccd8; line-height:1.55; }
+.trilha-etiqueta { color:#ff4f6d; font-size:12px; font-weight:750; letter-spacing:.12em; }
+.trilha-placar { min-width:220px; display:grid; gap:4px; }
+.trilha-placar strong { font-size:32px; }
+.trilha-placar small { font-size:16px; color:#aab3c0; }
+.trilha-placar span { color:#aab3c0; font-size:13px; }
+.trilha-barra { height:8px; border-radius:6px; background:#262c35; overflow:hidden; }
+.trilha-barra i { display:block; height:100%; background:#ff173b; }
+.trilha-erro { margin:0; padding:10px 14px; border:1px solid #6e3543; border-radius:8px; background:#23141a; }
+
+.trilha-legenda { display:flex; flex-wrap:wrap; gap:18px; margin:0; padding:0; list-style:none; color:#c4ccd8; font-size:13px; }
+.trilha-legenda li { display:flex; align-items:center; gap:7px; }
+.trilha-legenda .ponto { width:12px; height:12px; border-radius:50%; border:2px solid; }
+.ponto.concluida { border-color:#2fbf71; background:#2fbf71; }
+.ponto.atual { border-color:#ff173b; background:#ff173b; box-shadow:0 0 0 4px rgba(255,23,59,.25); }
+.ponto.disponivel { border-color:#ff4f6d; }
+.ponto.bloqueada { border-color:#4a525e; background:#2a3039; }
+
+.trilha-mapa { position:relative; padding:0; border:1px solid #29313c; border-radius:14px;
+  background:radial-gradient(circle at 20% 10%, rgba(255,23,59,.06), transparent 40%), #101318; overflow:hidden; }
+.trilha-caminho { position:absolute; inset:0; width:100%; height:100%; }
+.trilha-caminho path { fill:none; stroke:#3a414c; stroke-width:6; stroke-dasharray:2 14; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+.trilha-mapa ol { margin:0; padding:0; list-style:none; }
+
+.trilha-parada { position:absolute; width:22%; transform:translate(-50%, -52px); display:flex; justify-content:center; }
+.trilha-alvo { display:flex; flex-direction:column; align-items:center; gap:6px; padding:0; border:0; background:none; color:inherit;
+  font:inherit; text-align:center; cursor:pointer; }
+div.trilha-alvo { cursor:default; }
+.trilha-marco { position:relative; display:grid; place-items:center; width:96px; height:96px; border-radius:50%;
+  border:3px solid #ff4f6d; background:#1a1f27; color:#ff4f6d; transition:transform .15s; }
+.trilha-marco img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
+.trilha-selo { position:absolute; left:-4px; top:-4px; display:grid; place-items:center; width:26px; height:26px; border-radius:50%;
+  border:2px solid currentColor; background:#1a1f27; font-style:normal; }
+.trilha-marco b { position:absolute; right:-6px; bottom:-4px; min-width:22px; height:22px; padding:0 5px; border-radius:11px;
+  background:#262c35; color:#e9ecf1; font-size:12px; line-height:22px; }
+button.trilha-alvo:hover .trilha-marco, button.trilha-alvo:focus-visible .trilha-marco { transform:scale(1.08); }
+.trilha-titulo { max-width:190px; font-size:14px; font-weight:650; line-height:1.3; }
+.trilha-estado { font-size:12px; color:#aab3c0; }
+.trilha-modulo { position:absolute; top:-30px; white-space:nowrap; padding:3px 10px; border-radius:20px; background:#2a1218;
+  border:1px solid #5a2532; color:#ff8a9d; font-size:12px; font-weight:700; letter-spacing:.04em; }
+
+.trilha-parada.concluida .trilha-marco { border-color:#2fbf71; background:#173326; color:#6fe0a0; }
+.trilha-parada.concluida .trilha-estado { color:#6fe0a0; }
+.trilha-parada.atual .trilha-marco { border-color:#ff173b; background:#3a1019; color:#fff; box-shadow:0 0 0 6px rgba(255,23,59,.22);
+  animation:trilha-pulso 2s ease-in-out infinite; }
+.trilha-parada.atual .trilha-estado { color:#ff4f6d; font-weight:700; }
+.trilha-parada.bloqueada .trilha-marco { border-color:#3d444f; background:#1b2027; color:#6b7480; }
+.trilha-parada.bloqueada .trilha-marco img { filter:grayscale(1) brightness(.55); }
+.trilha-parada.bloqueada .trilha-titulo { color:#8a929e; }
+.trilha-parada.final .trilha-marco { width:112px; height:112px; border-color:#ffb020; color:#ffb020; background:#2b2312; }
+.trilha-parada.final .trilha-titulo { color:#ffd27a; }
+@keyframes trilha-pulso { 50% { box-shadow:0 0 0 12px rgba(255,23,59,.08); } }
+
+@media (max-width:820px) {
+  .trilha-mapa { height:auto !important; padding:16px; }
+  .trilha-caminho { display:none; }
+  .trilha-mapa ol { display:grid; gap:34px; padding-top:20px; }
+  .trilha-parada { position:static; width:auto; transform:none; }
+}
+
+/* Trilha inteira concluída: a arte de parabéns aparece acima do mapa. */
+.trilha-conclusao { margin:0 0 22px; border:1px solid #3a1d24; border-radius:16px; overflow:hidden; background:#0b0b0d;
+  box-shadow:0 18px 40px rgba(0,0,0,.45); }
+.trilha-conclusao img { display:block; width:100%; height:auto; }

@@ -1,0 +1,65 @@
+# Ambientes e dependências
+/venv/
+/frontend/node_modules
+
+# Arquivos gerados
+/frontend/dist/
+**/__pycache__/
+*.py[cod]
+*.log
+
+# Dados de execução
+/data/
+/logs/
+
+# Backups e históricos externos
+/backups/
+/archive/
+
+# Bancos locais
+*.db
+*.sqlite
+*.sqlite3
+
+# Segredos e configurações privadas
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*secret*
+*credentials*
+*token*
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Relatórios locais de cobertura
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Arquivos específicos da instalação local
+/images/pinglevel-ssh/authorized_keys
+/images/core-9.2.1/*.deb
+
+# Instaladores históricos aplicados
+/frontend/aplicar_*.py
+
+# Cópias de build e de configuração guardadas antes de publicações
+/frontend/dist-*/
+*.bak-*
+
+# Proposta de medalhas rejeitada; mantida apenas em disco como histórico
+/docs/projeto/prototipos/medalhas-*/
+
+# Ambiente de testes local (venv, navegador, builds e capturas)
+/.qa/

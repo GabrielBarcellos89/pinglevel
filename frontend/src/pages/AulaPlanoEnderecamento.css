@@ -1,0 +1,46 @@
+/* Aula Plano de endereçamento: reaproveita AulaGateway.css e AulaFerramentas.css (classes ag- e af-). */
+.aula-plano .ap-faixas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:14px 0; }
+.aula-plano .ap-faixas div { display:flex; flex-direction:column; gap:4px; padding:12px; border:1px solid #4a2733; border-radius:10px; background:#160f13; }
+.aula-plano .ap-faixas strong { font:600 17px Consolas,monospace; color:#ff4d5e; }
+.aula-plano .ap-faixas span { font:13px Consolas,monospace; color:#c4ccd8; }
+.aula-plano .ap-contexto { font-weight:400; color:#aab3c0; }
+
+.aula-plano .ap-controle { margin:14px 0; padding:14px 16px; border:1px solid rgba(255,255,255,.1); border-radius:10px; }
+.aula-plano .ap-controle label { font-size:15px; }
+.aula-plano .ap-controle input[type=range] { width:100%; accent-color:#ff4d5e; margin:8px 0; }
+.aula-plano .ap-controle dl { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:6px 0 12px; }
+.aula-plano .ap-controle dl div { padding:8px 10px; border-radius:8px; background:#12161c; }
+.aula-plano .ap-controle dt { font-size:12px; color:#aab3c0; }
+.aula-plano .ap-controle dd { margin:2px 0 0; font:700 22px Consolas,monospace; }
+.aula-plano .ap-faixa { display:flex; gap:2px; height:22px; border-radius:6px; overflow:hidden; }
+.aula-plano .ap-faixa span { flex:1; opacity:.8; }
+.aula-plano .ap-faixa-divisao { height:30px; margin:12px 0; }
+.aula-plano .ap-faixa-divisao span { display:grid; place-items:center; color:#0b0f14; font:700 12px Consolas,monospace; }
+
+.aula-plano .ap-numero { width:110px; padding:8px 10px; border:1px solid #394453; border-radius:7px; background:#0b0f14; color:#f2f4f7; font:15px Consolas,monospace; }
+.aula-plano .ap-tabela { display:grid; gap:6px; margin:10px 0 14px; }
+.aula-plano .ap-linha { display:grid; grid-template-columns:110px minmax(0,1fr) minmax(0,1fr); gap:10px; align-items:start; }
+.aula-plano .ap-cabecalho { font-size:12px; color:#aab3c0; }
+.aula-plano .ap-linha>span { display:flex; flex-direction:column; gap:4px; }
+.aula-plano .ap-linha>span:first-child { flex-direction:row; align-items:center; gap:8px; padding-top:9px; font-weight:600; }
+.aula-plano .ap-linha i { width:12px; height:12px; border-radius:3px; }
+.aula-plano .ap-linha input { padding:8px 10px; border:1px solid #394453; border-radius:7px; background:#0b0f14; color:#f2f4f7; font:15px Consolas,monospace; }
+.aula-plano .ap-linha input.ok { border-color:#2fbf71; }
+.aula-plano .ap-linha input.erro { border-color:#ff4d5e; }
+.aula-plano .ap-linha small { color:#ffc782; font-size:12px; }
+
+@media (max-width:720px) {
+  .aula-plano .ap-faixas, .aula-plano .ap-controle dl { grid-template-columns:1fr 1fr; }
+}
+.aula-plano .ap-cabecalho>span:first-child { padding-top:0; font-weight:400; }
+
+/* Explicação das faixas privadas e dos endereços especiais antes dos exercícios. */
+.aula-plano .ap-faixas p { margin:6px 0 2px; font-size:14px; line-height:1.5; color:#d7dbe2; }
+.aula-plano .ap-faixas small { font:12px/1.5 Consolas,monospace; color:#9fb2c4; }
+.aula-plano .ap-como { margin:6px 0 14px; padding:12px 16px; border-left:3px solid #ff2d4a; border-radius:6px; background:rgba(255,45,74,.06); }
+.aula-plano .ap-como ol { margin:6px 0 0; padding-left:20px; line-height:1.65; font-size:15px; }
+.aula-plano .ap-especiais { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:14px 0; }
+.aula-plano .ap-especiais div { padding:12px; border:1px solid #2c343f; border-radius:10px; background:#12161c; }
+.aula-plano .ap-especiais code { display:block; font:600 15px Consolas,monospace; color:#ff4d5e; }
+.aula-plano .ap-especiais strong { display:block; margin:2px 0 4px; font-size:15px; }
+.aula-plano .ap-especiais p { margin:0; font-size:14px; line-height:1.5; color:#d7dbe2; }

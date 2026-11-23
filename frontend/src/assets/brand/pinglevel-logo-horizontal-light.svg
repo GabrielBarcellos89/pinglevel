@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="400" viewBox="0 0 1600 400" role="img" aria-labelledby="title desc">
+  <title id="title">PingLevel</title><desc id="desc">Versão clara do logotipo PingLevel</desc><rect width="1600" height="400" fill="#F7F8FA"/>
+  <g transform="translate(70 46)"><path fill="#F02035" d="M0 0h173c32 0 59 15 73 37H0V0Z"/><path fill="#F02035" d="M0 49h246v34H0V49Z"/><path fill="#F02035" d="M0 94h246v33H0V94Z"/><path fill="#F02035" d="M0 139h232c-14 21-35 34-59 34H0v-34Z"/><path fill="#242932" d="M0 185h162l-33 33H0v-33Z"/><path fill="#242932" d="M0 231h127v32H0v-32Z"/><path fill="#242932" d="M0 276h127v32H0v-32Z"/></g>
+  <g font-family="Nimbus Sans, Arial, sans-serif"><text x="355" y="213" font-size="142" font-weight="700" letter-spacing="2" fill="#171A20">PING</text><text x="730" y="213" font-size="142" font-weight="700" letter-spacing="2" fill="#F02035">LEVEL</text><text x="362" y="286" font-size="49" letter-spacing="3" fill="#5F6672">Aprenda. Pratique. Evolua.</text></g>
+</svg>

@@ -1,0 +1,53 @@
+/* Aula VLSM: reaproveita AulaGateway.css, AulaFerramentas.css e AulaPlanoEnderecamento.css. */
+.aula-vlsm .av-demandas { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0; padding:0; list-style:none; }
+.aula-vlsm .av-demandas li { display:grid; grid-template-columns:12px 1fr; column-gap:8px; padding:10px 12px; border:1px solid rgba(255,255,255,.1); border-radius:9px; }
+.aula-vlsm .av-demandas i, .aula-vlsm .av-ordem i { width:12px; height:12px; border-radius:3px; align-self:center; }
+.aula-vlsm .av-demandas span { grid-column:2; color:#aab3c0; font-size:13px; }
+
+.aula-vlsm .av-faixa { position:relative; display:block; height:30px; margin:10px 0; background:#1a1f27; border:1px dashed #3a4350; }
+.aula-vlsm .av-faixa span { position:absolute; top:0; bottom:0; display:grid; place-items:center; border-right:2px solid #0b0f14;
+  color:#0b0f14; font:700 12px Consolas,monospace; opacity:.85; }
+.aula-vlsm .av-comparacao { display:grid; gap:4px; margin:12px 0; font-size:13px; color:#c4ccd8; }
+
+.aula-vlsm .av-ordem { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0; }
+.aula-vlsm .av-ordem button { display:grid; grid-template-columns:12px 1fr; column-gap:8px; padding:10px 12px; text-align:left;
+  border:1px solid #394453; border-radius:9px; background:#12161c; color:#f2f4f7; font:600 15px inherit; cursor:pointer; }
+.aula-vlsm .av-ordem button small { grid-column:2; color:#aab3c0; font-weight:400; font-size:13px; }
+.aula-vlsm .av-ordem button:disabled { opacity:.35; cursor:default; }
+.aula-vlsm .av-escolhida { display:flex; flex-wrap:wrap; gap:6px 24px; min-height:24px; margin:6px 0 10px; padding-left:20px; font-weight:600; }
+.aula-vlsm .av-limpar { margin-bottom:10px; }
+
+.aula-vlsm .av-tabela .ap-linha { grid-template-columns:minmax(250px,1.2fr) 190px minmax(0,1fr); align-items:center; }
+.aula-vlsm .av-tabela .ap-linha>span:first-child { white-space:nowrap; }
+.aula-vlsm .av-tabela .ap-linha>span:first-child small { margin-left:6px; color:#aab3c0; font-weight:400; }
+.aula-vlsm .av-tabela select { padding:8px 10px; border:1px solid #394453; border-radius:7px; background:#0b0f14; color:#f2f4f7; font:14px Consolas,monospace; }
+.aula-vlsm .av-tabela select.ok { border-color:#2fbf71; }
+.aula-vlsm .av-tabela select.erro { border-color:#ff4d5e; }
+
+.aula-vlsm .av-erro { display:grid; gap:4px; margin:12px 0; padding:12px 14px; border:1px solid rgba(255,255,255,.1); border-radius:10px; }
+.aula-vlsm .av-erro p { margin:0; }
+.aula-vlsm .av-erro span { color:#aab3c0; }
+
+@media (max-width:720px) {
+  .aula-vlsm .av-demandas, .aula-vlsm .av-ordem { grid-template-columns:1fr; }
+  .aula-vlsm .av-tabela .ap-linha { grid-template-columns:1fr; }
+}
+
+/* Uniformidade com as outras aulas: texto de apoio em 15px, rótulos em 13px, números em fonte mono 15px. */
+.aula-vlsm .aula-bloco > p:not(.aula-destaque):not(.ag-fonte):not(.ag-retorno) { font-size:16px; line-height:1.6; }
+.aula-vlsm .aula-bloco h3 { margin:18px 0 8px; font-size:17px; }
+.aula-vlsm .ap-como p { margin:6px 0 0; font-size:15px; line-height:1.6; }
+.aula-vlsm .av-demandas strong, .aula-vlsm .av-tabela .ap-linha>span:first-child { font-size:15px; }
+.aula-vlsm .av-demandas span, .aula-vlsm .av-tabela .ap-linha>span:first-child small { font-size:13px; }
+.aula-vlsm .av-tabela select, .aula-vlsm .av-tabela input { font:15px Consolas,monospace; }
+.aula-vlsm .av-tabela .ap-cabecalho span { font-size:13px; color:#aab3c0; }
+.aula-vlsm .av-erro p { font-size:15px; }
+.aula-vlsm .av-erro code { font-size:15px; }
+
+/* Tabela de referência de prefixos. */
+.aula-vlsm .av-ref { display:grid; margin:12px 0; border:1px solid #2c343f; border-radius:10px; overflow:hidden; max-width:520px; }
+.aula-vlsm .av-ref-linha { display:grid; grid-template-columns:1fr 1.4fr 1fr; padding:6px 14px; font-size:15px; }
+.aula-vlsm .av-ref-linha:nth-child(even) { background:#12161c; }
+.aula-vlsm .av-ref-cab { font-size:13px; color:#aab3c0; background:#171c24!important; }
+.aula-vlsm .av-ref-linha code { font:600 15px Consolas,monospace; color:#ff4d5e; }
+.aula-vlsm .av-ref-linha.destaque { box-shadow:inset 3px 0 0 #ff2d4a; background:#24131a!important; }

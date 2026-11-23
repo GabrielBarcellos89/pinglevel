@@ -1,0 +1,19 @@
+/* Aula Ferramentas: saídas de terminal e exercícios; reaproveita AulaGateway.css (classe aula-gateway). */
+.aula-ferramentas .af-terminal { margin:12px 0; padding:12px 14px; background:#070b0f; border:1px solid #26313b; border-radius:8px;
+  font:14px/1.6 Consolas,monospace; color:#b9d0c7; white-space:pre-wrap; overflow-wrap:anywhere; }
+.aula-ferramentas .af-prompt { color:#ecf0f7; font-weight:600; }
+.aula-ferramentas .af-trecho { display:inline; padding:1px 2px; border:0; border-radius:4px; background:transparent; color:inherit;
+  font:inherit; text-align:left; white-space:pre-wrap; cursor:pointer; text-decoration:underline dotted #ff4d5e; text-underline-offset:4px; }
+.aula-ferramentas .af-trecho.visto { text-decoration-color:#3a7d5a; }
+.aula-ferramentas .af-trecho.ativo { background:rgba(255,45,74,.2); color:#fff; }
+.aula-ferramentas .af-caso { display:grid; gap:8px; margin:10px 0; padding:12px 14px; border:1px solid rgba(255,255,255,.1); border-radius:10px; }
+.aula-ferramentas .af-caso .af-terminal { margin:0; }
+.aula-ferramentas .af-caso-linha { grid-template-columns:150px minmax(0, 1fr); align-items:center; }
+.aula-ferramentas .af-caso-linha .ag-retorno { grid-column:1 / -1; }
+.aula-ferramentas .af-escolhas button { text-align:left; }
+.aula-ferramentas .af-explicacoes p { margin:6px 0; line-height:1.55; }
+.aula-ferramentas .af-explicacoes code { color:#ff4d5e; }
+.aula-ferramentas .af-comando { display:flex; align-items:center; gap:8px; padding:6px 10px; background:#070b0f; border:1px solid #26313b; border-radius:8px; }
+.aula-ferramentas .af-comando span { color:#2fbf71; font-family:Consolas,monospace; }
+.aula-ferramentas .af-comando input { flex:1; min-width:0; border:0; background:transparent; color:#ecf0f7; font:14px Consolas,monospace; outline:none; }
+.aula-ferramentas label { font-weight:600; }

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Servidores DNS da concessão, escritos no próprio /etc/resolv.conf (ver ../udhcpc.conf).
+[ -n "$dns" ] || exit 0
+{
+	[ -n "$domain" ] && echo "search $domain"
+	for i in $dns; do echo "nameserver $i"; done
+} > /etc/resolv.conf
+for i in $dns; do echo "adding dns $i"; done

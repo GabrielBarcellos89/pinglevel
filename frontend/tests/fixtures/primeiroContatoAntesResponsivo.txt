@@ -1,0 +1,367 @@
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import {
+  Check, CheckCircle2, Circle, Clock3, Computer, LoaderCircle,
+  MessageCircleQuestion, Minimize2, Network, Play, Send,
+  SquareTerminal, StopCircle, Trophy,
+} from 'lucide-react'
+import linkObservando from '../assets/mascote/link-expansao-v1/link-observando-rede.webp'
+import linkRecebendoXp from '../assets/mascote/link-expansao-v1/link-recebendo-xp.webp'
+import BastidoresRede from '../components/laboratorio/BastidoresRede'
+import './Laboratorio.css'
+
+const MISSAO_INICIAL = {
+  titulo: 'Missão: Primeiro Contato', descricao: 'Carregando a missão...', xp: 100,
+  nos: [], etapas: [], evidencias: [], proxima_etapa: null, concluido: false,
+}
+
+async function chamarApi(caminho, opcoes = {}) {
+  const resposta = await fetch(caminho, { credentials: 'same-origin', ...opcoes })
+  const dados = await resposta.json().catch(() => ({}))
+  if (!resposta.ok || dados.sucesso === false) {
+    const erro = new Error(dados.mensagem || 'Não foi possível concluir a operação.')
+    erro.dados = dados
+    throw erro
+  }
+  return dados
+}
+
+function formatarTempo(segundos) {
+  const total = Math.max(0, Number(segundos || 0))
+  return `${String(Math.floor(total / 60)).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`
+}
+
+function Laboratorio() {
+  const navigate = useNavigate()
+  const [ativo, setAtivo] = useState(false)
+  const [outroLaboratorio, setOutroLaboratorio] = useState(null)
+  const [missao, setMissao] = useState(MISSAO_INICIAL)
+  const [segundosRestantes, setSegundosRestantes] = useState(0)
+  const [nodeId, setNodeId] = useState(1)
+  const [comandos, setComandos] = useState({ 1: '', 2: '' })
+  const [historicos, setHistoricos] = useState({ 1: [], 2: [] })
+  const [carregando, setCarregando] = useState(true)
+  const [processando, setProcessando] = useState(false)
+  const [aviso, setAviso] = useState({ texto: '', erro: false })
+  const [tutorAberto, setTutorAberto] = useState(false)
+  const [pergunta, setPergunta] = useState('')
+  const [mensagensTutor, setMensagensTutor] = useState([])
+  const [conclusao, setConclusao] = useState(null)
+  const [bastidores, setBastidores] = useState(null)
+  const [capturando, setCapturando] = useState(false)
+  const capturandoRef = useRef(false)
+  const terminalRef = useRef(null)
+  const tutorRef = useRef(null)
+  const prazoRef = useRef(null)
+  const [tempoSessao, setTempoSessao] = useState(null)
+  const [avisoExtensao, setAvisoExtensao] = useState(null)
+  const sessionIdRef = useRef(null)
+  const avisosTempoRef = useRef(new Set())
+  const encerrandoPorTempoRef = useRef(false)
+
+  const etapasConcluidas = useMemo(
+    () => missao.etapas.filter((etapa) => etapa.concluida).length,
+    [missao.etapas],
+  )
+  const progresso = missao.etapas.length
+    ? Math.round((etapasConcluidas / missao.etapas.length) * 100) : 0
+  const historicoAtual = historicos[nodeId] || []
+  const comandoAtual = comandos[nodeId] || ''
+  const nosOrdenados = useMemo(() => {
+    const ordem = [1, 3, 2]
+    return ordem
+      .map((id) => missao.nos.find((no) => no.id === id))
+      .filter(Boolean)
+  }, [missao.nos])
+
+  function aplicarStatus(dados) {
+    if (dados.ativo && dados.laboratorio?.laboratorio_id && dados.laboratorio.laboratorio_id !== 'primeiro-contato') {
+      setOutroLaboratorio(dados.laboratorio.laboratorio_id)
+      setAtivo(false); setTempoSessao(null); prazoRef.current = null
+      return
+    }
+    setOutroLaboratorio(null)
+    setAtivo(Boolean(dados.ativo))
+    if (dados.ativo && dados.laboratorio) {
+      const laboratorio = dados.laboratorio
+      const sessaoAtual = String(laboratorio.session_id)
+      if (sessionIdRef.current !== sessaoAtual) {
+        sessionIdRef.current = sessaoAtual
+        avisosTempoRef.current = new Set()
+        setAvisoExtensao(null)
+      }
+      setTempoSessao(laboratorio)
+      const agoraLocal = Date.now()
+      const temPrazoServidor = Number.isFinite(laboratorio.prazo)
+        && Number.isFinite(laboratorio.agora)
+      if (temPrazoServidor) {
+        prazoRef.current = agoraLocal
+          + Math.max(0, laboratorio.prazo - laboratorio.agora) * 1000
+      } else {
+        // Compatibilidade enquanto o backend em execução usa a API anterior.
+        const sessao = String(laboratorio.session_id)
+        const sessaoSalva = sessionStorage.getItem('pinglevel:lab:sessao')
+        const prazoSalvo = Number(sessionStorage.getItem('pinglevel:lab:prazo'))
+        const segundos = Number.isFinite(laboratorio.segundos_restantes)
+          ? laboratorio.segundos_restantes : 300
+        prazoRef.current = sessaoSalva === sessao
+          && Number.isFinite(prazoSalvo) && prazoSalvo > 0
+          ? prazoSalvo : agoraLocal + Math.max(0, segundos) * 1000
+      }
+      sessionStorage.setItem('pinglevel:lab:sessao', String(laboratorio.session_id))
+      sessionStorage.setItem('pinglevel:lab:prazo', String(prazoRef.current))
+      setSegundosRestantes(Math.max(
+        0,
+        Math.ceil((prazoRef.current - Date.now()) / 1000),
+      ))
+    } else {
+      setTempoSessao(null)
+      sessionIdRef.current = null
+      avisosTempoRef.current = new Set()
+      setAvisoExtensao(null)
+      sessionStorage.removeItem('pinglevel:lab:sessao')
+      sessionStorage.removeItem('pinglevel:lab:prazo')
+      prazoRef.current = null
+      setSegundosRestantes(0)
+    }
+    if (!dados.ativo) setBastidores(null)
+    else if (!capturandoRef.current && Object.hasOwn(dados, 'bastidores')) {
+      setBastidores(dados.bastidores)
+    }
+    if (dados.missao) setMissao(dados.missao)
+  }
+
+  async function consultarStatus(silencioso = false) {
+    try {
+      aplicarStatus(await chamarApi('/api/status'))
+      if (!silencioso) setAviso({ texto: '', erro: false })
+    } catch (erro) {
+      if (!silencioso) setAviso({ texto: erro.message, erro: true })
+    } finally {
+      if (!silencioso) setCarregando(false)
+    }
+  }
+
+  useEffect(() => {
+    consultarStatus()
+    const intervalo = window.setInterval(() => consultarStatus(true), 10000)
+    return () => window.clearInterval(intervalo)
+  }, [])
+
+  useEffect(() => {
+    if (!ativo) return undefined
+    const relogio = window.setInterval(() => {
+      const restantes = prazoRef.current
+        ? Math.max(0, Math.ceil((prazoRef.current - Date.now()) / 1000))
+        : 0
+      setSegundosRestantes(restantes)
+    }, 1000)
+    return () => window.clearInterval(relogio)
+  }, [ativo])
+
+  useEffect(() => {
+    if (!ativo || !tempoSessao?.pode_estender || segundosRestantes <= 0) return
+    if (segundosRestantes <= 15 && !avisosTempoRef.current.has('fechando')) {
+      avisosTempoRef.current.add('fechando')
+      setAvisoExtensao('fechando')
+    } else if (segundosRestantes <= 60 && !avisosTempoRef.current.has('minuto')) {
+      avisosTempoRef.current.add('minuto')
+      setAvisoExtensao('minuto')
+    }
+  }, [ativo, segundosRestantes, tempoSessao?.pode_estender])
+
+  useEffect(() => {
+    if (!ativo || segundosRestantes > 0 || !prazoRef.current || encerrandoPorTempoRef.current) {
+      return
+    }
+    encerrandoPorTempoRef.current = true
+    chamarApi('/api/status')
+      .then((dados) => {
+        aplicarStatus(dados)
+        if (!dados.ativo) {
+          setAviso({ texto: 'O tempo terminou e o laboratório foi encerrado.', erro: false })
+        }
+      })
+      .catch((erro) => setAviso({ texto: erro.message, erro: true }))
+      .finally(() => { encerrandoPorTempoRef.current = false })
+  }, [ativo, segundosRestantes])
+
+  useEffect(() => {
+    setNodeId(1)
+  }, [missao.proxima_etapa])
+
+  useEffect(() => {
+    if (terminalRef.current) terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+  }, [historicoAtual])
+
+  useEffect(() => {
+    if (tutorRef.current) tutorRef.current.scrollTop = tutorRef.current.scrollHeight
+  }, [mensagensTutor])
+
+  async function iniciar() {
+    setProcessando(true)
+    setAviso({ texto: 'Preparando sua sessão CORE...', erro: false })
+    try {
+      await chamarApi('/api/iniciar', { method: 'POST' })
+      await consultarStatus(true)
+      setBastidores(null)
+      setHistoricos({ 1: [], 2: [] })
+      setMensagensTutor([])
+      setAviso({ texto: 'Ambiente pronto. Comece identificando o Computador 1.', erro: false })
+    } catch (erro) {
+      setAviso({ texto: erro.message, erro: true })
+      if (erro.dados?.ativo) await consultarStatus(true)
+    } finally { setProcessando(false) }
+  }
+
+  async function estender() {
+    setProcessando(true)
+    try {
+      const dados = await chamarApi('/api/estender', { method: 'POST' })
+      avisosTempoRef.current = new Set(['minuto', 'fechando'])
+      setAvisoExtensao(null)
+      aplicarStatus(dados)
+      setAviso({ texto: dados.mensagem, erro: false })
+    } catch (erro) {
+      setAviso({ texto: erro.message, erro: true })
+      await consultarStatus(true)
+    } finally { setProcessando(false) }
+  }
+
+  async function executar(evento) {
+    evento.preventDefault()
+    const atual = comandoAtual.trim()
+    if (!ativo || !atual || processando) return
+    const observar = /^ping(?:\s|$)/.test(atual)
+    if (observar && missao.aprendizagem && !missao.aprendizagem.previsao) {
+      setAviso({ texto: 'Registre sua previsão nos Bastidores antes de executar o ping.', erro: false })
+      return
+    }
+    capturandoRef.current = observar
+    setCapturando(observar)
+    setProcessando(true)
+    setAviso({ texto: '', erro: false })
+    setHistoricos((atuais) => ({
+      ...atuais,
+      [nodeId]: [...(atuais[nodeId] || []), { tipo: 'comando', texto: atual }],
+    }))
+    setComandos((valores) => ({ ...valores, [nodeId]: '' }))
+    try {
+      const dados = await chamarApi('/api/comando', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ node_id: nodeId, comando: atual }),
+      })
+      setHistoricos((atuais) => ({
+        ...atuais,
+        [nodeId]: [...(atuais[nodeId] || []), {
+          tipo: dados.codigo === 0 ? 'saida' : 'erro',
+          texto: dados.saida || dados.mensagem,
+        }],
+      }))
+      if (observar) setBastidores(dados.bastidores || null)
+      if (dados.missao) setMissao(dados.missao)
+    } catch (erro) {
+      if (erro.dados?.bastidores) setBastidores(erro.dados.bastidores)
+      setHistoricos((atuais) => ({
+        ...atuais,
+        [nodeId]: [...(atuais[nodeId] || []), { tipo: 'erro', texto: erro.message }],
+      }))
+    } finally {
+      capturandoRef.current = false
+      setCapturando(false)
+      setProcessando(false)
+    }
+  }
+
+  async function responderAprendizagem(fase, resposta) {
+    setProcessando(true)
+    try {
+      const dados = await chamarApi('/api/aprendizagem', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fase, resposta }),
+      })
+      if (dados.missao) setMissao(dados.missao)
+      setAviso({ texto: '', erro: false })
+    } catch (erro) {
+      setAviso({ texto: erro.message, erro: true })
+    } finally { setProcessando(false) }
+  }
+
+  async function validar() {
+    setProcessando(true)
+    try {
+      const dados = await chamarApi('/api/validar', { method: 'POST' })
+      if (dados.missao) setMissao(dados.missao)
+      setConclusao({ xp: dados.xp_concedido, mensagem: dados.mensagem })
+    } catch (erro) {
+      if (erro.dados?.missao) setMissao(erro.dados.missao)
+      setAviso({ texto: erro.message, erro: true })
+    } finally { setProcessando(false) }
+  }
+
+  async function encerrar() {
+    setProcessando(true)
+    try {
+      const dados = await chamarApi('/api/encerrar', { method: 'POST' })
+      aplicarStatus({ ativo: false })
+      setAviso({ texto: dados.mensagem, erro: false })
+    } catch (erro) { setAviso({ texto: erro.message, erro: true })
+    } finally { setProcessando(false) }
+  }
+
+  async function concluirEVoltar() {
+    if (processando) return
+    setProcessando(true)
+    try {
+      if (ativo) {
+        await chamarApi('/api/encerrar', { method: 'POST' })
+      }
+      aplicarStatus({ ativo: false })
+      setConclusao(null)
+      navigate('/')
+    } catch (erro) {
+      setConclusao(null)
+      setAviso({
+        texto: `A missão foi concluída, mas o ambiente não pôde ser encerrado: ${erro.message}`,
+        erro: true,
+      })
+    } finally {
+      setProcessando(false)
+    }
+  }
+
+  async function perguntarTutor(evento) {
+    evento.preventDefault()
+    const texto = pergunta.trim()
+    if (!texto || processando) return
+    const horario = new Intl.DateTimeFormat('pt-BR', {
+      hour: '2-digit', minute: '2-digit',
+    }).format(new Date())
+    setMensagensTutor((atuais) => [
+      ...atuais,
+      { tipo: 'aluno', texto, horario },
+    ])
+    setPergunta('')
+    setProcessando(true)
+    try {
+      const dados = await chamarApi('/api/tutor', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ node_id: nodeId, pergunta: texto }),
+      })
+      setMensagensTutor((atuais) => [
+        ...atuais,
+        {
+          tipo: 'link',
+          texto: dados.resposta,
+          fonte: dados.fonte,
+          horario,
+        },
+      ])
+    } catch (erro) {
+      setMensagensTutor((atuais) => [
+        ...atuais,
+        { tipo: 'erro', texto: erro.message, horario },
+      ])
+    } finally { setProcessando(false) }
+  }
+

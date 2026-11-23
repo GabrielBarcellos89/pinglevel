@@ -1,0 +1,9 @@
+# Só a rede do laboratório: chave da demonstração, sem perguntas, desiste rápido se não houver caminho.
+Host 192.168.*
+    User root
+    IdentityFile /root/.ssh/id_demo
+    BatchMode yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    LogLevel ERROR
+    ConnectTimeout 3

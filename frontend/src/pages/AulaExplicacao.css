@@ -1,0 +1,21 @@
+/* Blocos de explicação que vêm antes das perguntas (aulas Ethernet, MAC e ARP e Transporte). Cores da plataforma:
+   vermelho só no destaque (borda e título), texto em branco e cinza. */
+.aula-explica { display:flex; flex-direction:column; gap:12px; margin:16px 0; padding:18px 22px; border:1px solid var(--borda);
+  border-left:3px solid var(--vermelho); border-radius:10px; background:#12161c; }
+.aula-explica h3 { margin:6px 0 0; font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--vermelho); }
+.aula-explica h3:first-child { margin-top:0; }
+.aula-explica p { margin:0; line-height:1.6; color:#d6dce4; }
+.aula-explica ol, .aula-explica ul { margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px; line-height:1.55; color:#d6dce4; }
+.aula-explica li::marker { color:var(--vermelho); font-weight:700; }
+.aula-explica b { color:#fff; }
+.aula-explica code { font:600 14px Consolas,monospace; color:#fff; background:#070b0f; padding:1px 6px; border-radius:4px; }
+/* MAC dividido em fabricante e interface. */
+.aula-mac { display:flex; flex-wrap:wrap; gap:10px; align-items:stretch; margin:2px 0; font:700 22px Consolas,monospace; }
+.aula-mac span { display:flex; flex-direction:column; align-items:center; gap:6px; padding:10px 18px; border-radius:8px; }
+.aula-mac small { font:600 11px Inter,system-ui,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--texto-suave); }
+.aula-mac .fabricante { background:rgba(240,32,53,.1); color:#fff; border:1px solid var(--vermelho); }
+.aula-mac .interface { background:#0f1d2e; color:#fff; border:1px solid #2f6fb3; }
+/* Tabela simples: porta, serviço. */
+.aula-tabela { display:grid; grid-template-columns:auto 1fr; gap:6px 18px; padding:10px 14px; border-radius:8px; background:#0c0f13; }
+.aula-tabela b { font-family:Consolas,monospace; color:var(--vermelho); }
+.aula-tabela span { color:#d6dce4; }

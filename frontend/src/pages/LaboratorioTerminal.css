@@ -1,0 +1,150 @@
+/* Lab 4 (chamados): reaproveita o visual do Lab 3 (LaboratorioGateway.css); aqui só o que é próprio dele. */
+
+/* Tela de missão */
+.lt-inicio { gap:16px; }
+.lt-missao { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr); gap:20px; padding:28px; border:1px solid #3c2730;
+  border-radius:14px; background:linear-gradient(120deg,#281117,#101419 55%); }
+.lt-missao h1 { margin:8px 0 10px; font-size:32px; }
+.lt-missao-texto>p { margin:0; max-width:72ch; color:#c4ccd8; line-height:1.6; font-size:16px; }
+.lt-fluxo { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:22px 0; padding:0; list-style:none; }
+.lt-fluxo li { display:flex; flex-direction:column; gap:4px; padding:12px; border:1px solid #2c343f; border-radius:10px; background:#12161c; }
+.lt-fluxo svg { color:#ff4f6d; }
+.lt-fluxo strong { font-size:14px; }
+.lt-fluxo small { color:#aab3c0; font-size:12px; }
+.lt-missao-acoes { display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:24px; }
+.lt-fluxo + .lt-missao-acoes { margin-top:0; }
+.lt-missao-acoes .gw-primario { padding:12px 22px; font-size:15px; }
+.lt-missao-acoes span { display:flex; align-items:center; gap:6px; color:#aab3c0; font-size:14px; }
+.lt-fila { display:flex; flex-direction:column; gap:10px; margin:0; padding:0; list-style:none; align-self:center; }
+.lt-fila li { display:flex; gap:12px; align-items:flex-start; padding:14px; border:1px solid #33404d; border-left:3px solid #ff4f6d;
+  border-radius:8px; background:#0f1318; }
+.lt-fila svg { flex-shrink:0; color:#ff8a9d; margin-top:2px; }
+.lt-fila div { display:flex; flex-direction:column; gap:4px; }
+.lt-fila b { font-size:13px; letter-spacing:.02em; }
+.lt-fila span { color:#c4ccd8; font-size:14px; font-style:italic; }
+
+/* Topologia: três PCs à esquerda, switch, roteador e servidor */
+.lt-topologia .lt-mapa { display:flex; align-items:center; gap:0; margin-top:6px; }
+.lt-zona { position:relative; display:flex; align-items:center; padding:18px 10px 8px; border:1px dashed #3a4350; border-radius:10px; }
+.lt-zona>span { position:absolute; top:3px; left:10px; font-size:12px; color:#8f99a7; letter-spacing:.03em; }
+.lt-zona-local { flex:0 0 auto; }
+.lt-zona-local .lt-cabo { flex:0 0 28px; }
+.lt-pcs { display:flex; flex-direction:column; gap:5px; }
+.lt-pc { display:grid; grid-template-columns:16px auto auto 1fr; column-gap:8px; align-items:baseline; min-width:330px; padding:5px 9px;
+  text-align:left; border:1px solid #343e4b; border-radius:7px; background:#141920; color:#e9ecf1; font:inherit; cursor:pointer; }
+.gw-v2 .lt-pc { display:grid; justify-content:stretch; min-height:0; }
+.lt-pc:disabled { cursor:default; opacity:1; }
+.lt-pc svg { align-self:center; }
+.lt-pc strong { font-size:12px; }
+.lt-pc small { font:11px Consolas,monospace; color:#9fb2c4; }
+.lt-pc i { justify-self:end; font-size:12px; font-style:normal; color:#8f99a7; }
+.lt-pc.aberto { border-color:#ff4f6d; }
+.lt-pc.aberto i { color:#ff8a9d; font-weight:700; }
+.lt-pc.resolvido { border-color:#2f7d55; }
+.lt-pc.resolvido i { color:#6fe0a0; }
+.lt-pc.selecionado { background:#22161b; box-shadow:0 0 0 2px rgba(255,79,109,.35); }
+.lt-cabo { flex:1 1 18px; min-width:14px; height:2px; background:#4a5463; }
+.lt-equip { display:flex; flex-direction:column; align-items:center; gap:1px; padding:6px 10px; border:1px solid #343e4b; border-radius:8px;
+  background:#141920; color:#e9ecf1; }
+.lt-equip strong { font-size:12px; }
+.lt-equip small { font:11px Consolas,monospace; color:#9fb2c4; white-space:nowrap; }
+.lt-equip small b { color:#c4ccd8; font-weight:600; }
+.lt-equip svg { width:16px; height:16px; }
+.lt-zona-remota { flex:0 0 auto; }
+
+/* Chamado aberto */
+.lt-chamado { padding:14px 16px; border:1px solid #4a2733; border-radius:10px; background:#160f13; margin-bottom:12px; }
+.lt-chamado>header { display:flex; align-items:center; gap:8px; color:#ff8a9d; }
+.lt-chamado>header span { font-size:12px; font-weight:750; letter-spacing:.1em; }
+.lt-chamado>header strong { color:#fff; font-size:15px; }
+.lt-chamado blockquote { margin:10px 0; padding:8px 12px; border-left:3px solid #ff4f6d; background:#1d1318; font-size:16px; font-style:italic; color:#f1f3f6; }
+.lt-ajuda-chamado { display:flex; gap:8px; align-items:flex-start; margin:0 0 10px; font-size:13px; color:#c4ccd8; }
+.lt-ajuda-chamado svg { flex-shrink:0; color:#ffc782; margin-top:2px; }
+.lt-causa-ok { display:flex; gap:8px; align-items:flex-start; margin:4px 0 0; font-size:14px; color:#c4ccd8; }
+.lt-causa-ok svg { flex-shrink:0; color:#6fe0a0; margin-top:2px; }
+.lt-causa-ok strong { color:#6fe0a0; }
+.lt-retorno { margin:10px 0 0; font-size:13px; color:#ffc782; }
+.lt-retorno.ok { color:#6fe0a0; }
+.lt-comprovar { border-color:#2f7d55; background:#0f1a15; }
+.lt-comprovar>header { color:#6fe0a0; }
+.lt-comprovar p { margin:8px 0 12px; font-size:14px; color:#c4ccd8; }
+
+.lt-opcoes { border:0; padding:0; margin:6px 0 10px; display:flex; flex-direction:column; gap:8px; }
+.lt-opcoes legend { font-size:13px; color:#c4ccd8; margin-bottom:6px; }
+.lt-opcoes label { display:flex; gap:8px; align-items:flex-start; font-size:14px; cursor:pointer; }
+.gw-v2 .lt-opcoes input { flex:0 0 auto; width:16px; height:16px; min-height:0; margin:2px 0 0; padding:0; accent-color:#ff4f6d; }
+.lt-opcoes.gw-proxima-acao { outline-offset:6px; border-radius:6px; }
+
+/* Terminal: janela contínua, prompt na mesma linha do comando, uma aba por PC */
+.lt-terminal { display:flex; flex-direction:column; }
+.lt-abas { display:flex; gap:2px; }
+.gw-v2 .lt-abas button { display:flex; min-height:0; align-items:center; gap:6px; padding:7px 14px; border:1px solid #26313b; border-bottom:0; border-radius:8px 8px 0 0;
+  background:#10151b; color:#aab3c0; font:600 13px inherit; cursor:pointer; }
+.gw-v2 .lt-abas button.ativa { background:#070b0f; color:#ecf0f7; }
+.lt-abas button i { padding:1px 6px; border-radius:8px; background:#3a1019; color:#ff8a9d; font:700 10px inherit; font-style:normal; }
+.lt-tela { min-height:240px; max-height:420px; overflow-y:auto; padding:12px 14px; background:#070b0f; border:1px solid #26313b;
+  border-radius:0 8px 8px 8px; font:13px/1.55 Consolas,'DejaVu Sans Mono',monospace; color:#b9d0c7; cursor:text; }
+.lt-boasvindas { margin:0 0 8px; color:#6b7787; }
+.lt-linha + .lt-linha { margin-top:6px; }
+.lt-cmd { color:#ecf0f7; overflow-wrap:anywhere; }
+.lt-ps1 { color:#76dda7; font-weight:600; }
+.lt-tela pre { margin:2px 0 0; white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; }
+.lt-tela pre.lt-erro, .lt-recusado { color:#ff8a9d; }
+.lt-recusado { margin:4px 0 0; }
+.lt-confirmacao { margin:2px 0 0; color:#6f9c86; font-size:12px; }
+.lt-entrada { display:flex; align-items:center; gap:8px; margin-top:6px; }
+.gw-v2 .lt-entrada input { flex:1; width:auto; min-width:0; min-height:0; padding:0; border:0; border-radius:0; outline:0;
+  background:transparent; color:#ecf0f7; font:inherit; caret-color:#76dda7; }
+.gw-v2 .lt-entrada input:focus-visible { outline:0; }
+.lt-entrada input:disabled { opacity:.5; }
+.gw-v3 .lt-entrada.gw-proxima-acao { border-radius:4px; outline-color:rgba(255,54,86,.6); box-shadow:none; }
+.lt-dica { margin:6px 0 0; font-size:12px; color:#8f99a7; }
+
+.lt-estado { display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:10px; padding:8px 12px; border:1px solid #26313b; border-radius:8px;
+  background:#0d1116; font-size:12px; color:#c4ccd8; }
+.lt-estado b { color:#8f99a7; font-weight:600; margin-right:4px; }
+.lt-estado em { font-style:normal; }
+.lt-estado em.ok { color:#6fe0a0; }
+.lt-estado em.falhou { color:#ffc782; }
+
+@media (max-width:1050px) {
+  .lt-missao { grid-template-columns:1fr; }
+  .lt-fluxo { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lt-topologia .lt-mapa { flex-wrap:wrap; gap:8px; }
+  .lt-cabo { display:none; }
+}
+
+/* Objetivo e andamento do chamado aberto; chamados já resolvidos ficam resumidos acima dele. */
+.lt-objetivo { display:flex; gap:8px; margin:0 0 8px; font-size:14px; color:#e6ebf2; }
+.lt-objetivo b { color:#ff8a9d; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding-top:2px; }
+.lt-checklist { list-style:none; margin:0 0 10px; padding:0; display:grid; gap:4px; }
+.lt-checklist li { display:flex; align-items:center; gap:8px; font-size:13.5px; color:#8b95a5; }
+.lt-checklist li>span { width:13px; height:13px; margin:0 1px; border:2px solid #4a5464; border-radius:50%; flex-shrink:0; }
+.lt-checklist li small { margin-left:auto; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+.lt-checklist li.feito { color:#c4ccd8; }
+.lt-checklist li.feito svg, .lt-checklist li.feito small { color:#6fe0a0; }
+.lt-checklist li.atual { color:#fff; font-weight:650; }
+.lt-checklist li.atual>span { border-color:#ff8a9d; }
+.lt-checklist li.atual small { color:#ff8a9d; }
+.lt-resolvidos { padding:10px 14px; border:1px solid #1f4a33; border-radius:10px; background:#0f1a14; margin-bottom:10px; display:grid; gap:6px; }
+.lt-resolvidos p { display:flex; gap:8px; margin:0; font-size:13.5px; color:#c4ccd8; }
+.lt-resolvidos svg { flex-shrink:0; color:#6fe0a0; margin-top:2px; }
+.lt-resolvidos strong { color:#6fe0a0; }
+.lt-resolvidos .lt-na-fila { color:#8b95a5; padding-left:23px; }
+
+/* Três colunas em tela baixa (notebook 1366×768): o mapa precisa caber inteiro. O "Agora faça" já diz o chamado atual. */
+@media (max-height:820px) and (min-width:851px) {
+  .lt-lab .pl-tres .lt-topologia h2 { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .lt-lab .pl-tres .pl-col-mapa>.gw-etapas { display:none; }
+  .lt-lab .pl-tres .lt-pc { grid-template-columns:16px auto 1fr; padding:3px 8px; }
+  .lt-lab .pl-tres .lt-pcs { gap:4px; }
+  .lt-lab .pl-tres .lt-topologia { padding-block:6px; }
+  .lt-lab .pl-tres .lt-pc i { grid-column:auto; justify-self:end; }
+  .lt-lab .pl-tres .lt-pc small { grid-column:2 / -1; grid-row:2; }
+  .lt-lab .pl-tres .lt-equip svg { display:none; }
+}
+
+/* A aba aberta tem de se distinguir da aba sugerida como próxima ação: aberta = barra vermelha em cima e texto forte;
+   sugerida = contorno tracejado. */
+.gw-v2 .lt-abas button.ativa { box-shadow:inset 0 3px 0 #ff3656; font-weight:700; }
+.gw-v3 .lt-abas button.gw-proxima-acao:not(.ativa) { outline:2px dashed #ff3656; outline-offset:2px; box-shadow:none; }

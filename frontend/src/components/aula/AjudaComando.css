@@ -1,0 +1,12 @@
+.ajuda-comando { display:grid; gap:8px; }
+.ajuda-botao { justify-self:start; display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border:1px solid var(--vermelho);
+  border-radius:8px; background:transparent; color:#f4f6f8; font:600 13px inherit; cursor:pointer; }
+.ajuda-botao:hover, .ajuda-botao:focus-visible { background:rgba(240,32,53,.12); color:#fff; }
+.ajuda-balao { display:grid; grid-template-columns:44px 1fr; gap:10px; padding:10px 12px; border:1px solid var(--borda); border-left:3px solid var(--vermelho); border-radius:10px; background:#12161c; }
+.ajuda-balao img { width:44px; height:60px; object-fit:contain; }
+.ajuda-balao strong { color:#ff4d5e; font-size:13px; }
+.ajuda-partes { margin:4px 0 0; padding-left:18px; color:#c4ccd8; font-size:14px; line-height:1.55; }
+.ajuda-partes code, .ajuda-livro code, .ajuda-pista code { color:#ecf0f7; background:#070b0f; padding:1px 5px; border-radius:4px; font-family:Consolas,monospace; }
+.ajuda-livro { display:flex; gap:6px; align-items:flex-start; margin:8px 0 0; color:#c4ccd8; font-size:14px; line-height:1.5; }
+.ajuda-livro svg { flex-shrink:0; margin-top:3px; color:#ffc782; }
+.ajuda-pista { margin:8px 0 0; color:#6fe0a0; font-size:14px; }

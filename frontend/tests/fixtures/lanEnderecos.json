@@ -1,0 +1,3152 @@
+[
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.0",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.127",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.128",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.255",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 8,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 9,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 10,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 11,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 12,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.255.255.254",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "172.16.2.3",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 13,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 14,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "172.23.255.254",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 15,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "172.29.1.1",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "172.30.1.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "172.31.1.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "192.168.50.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 16,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 17,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 18,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 19,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 20,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 21,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 22,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 23,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 24,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 25,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 26,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 27,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 28,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 29,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 30,
+    "valido": true
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "192.168.255.254",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "192.167.1.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "8.8.8.8",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "127.0.0.1",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "169.254.1.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "100.64.1.2",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "224.0.0.1",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "010.20.0.10",
+    "prefixo": "",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 7,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 8,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 9,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 10,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 11,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 12,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 13,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 14,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 15,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 16,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 17,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 18,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 19,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 20,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 21,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 22,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 23,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 24,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 25,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 26,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 27,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 28,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 29,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 30,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 31,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": 32,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": null,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": true,
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": "24",
+    "valido": false
+  },
+  {
+    "ip": "10.20.0.10; id",
+    "prefixo": "",
+    "valido": false
+  }
+]
