@@ -4,7 +4,7 @@ Plataforma de ensino de **Redes de Computadores** com aulas interativas e labora
 acompanhados pelo **Link**, um tutor que dá pistas sem entregar a resposta.
 
 Criado por **Gabriel Barcellos** ([GitHub](https://github.com/GabrielBarcellos89) ·
-[LinkedIn](https://www.linkedin.com/in/gabriel-barcellos-089a8499/)) como Trabalho de Conclusão de Curso.
+[LinkedIn](https://www.linkedin.com/in/gabriel-barcellos-089a8499/)) como Projeto Integrador I.
 
 ![Tela de login](docs/capturas/login.png)
 
